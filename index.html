@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoloSophy — The Art of Investment</title>
+  <meta name="description" content="SoloSophy market intelligence web app prototype for gold, silver, oil and equities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark">S</div>
+          <div>
+            <div class="brand-name">SoloSophy</div>
+            <div class="brand-subtitle">The Art of Investment</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="chip active" data-lang="ar">العربية</button>
+          <button class="chip" data-lang="en">English</button>
+          <button class="chip" id="refreshBtn">تحديث</button>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Market Vision Edition</div>
+          <h1 data-i18n="heroTitle">نبض الأسواق في لوحة واحدة</h1>
+          <p data-i18n="heroText">متابعة منظمة للذهب والفضة والنفط والأسهم، مع أخبار مختارة وسيناريوهات قابلة للتحديث عبر API.</p>
+          <div class="status-row">
+            <span class="status-dot"></span>
+            <span id="lastUpdated">جارٍ التحميل...</span>
+          </div>
+        </div>
+        <aside class="vision-card">
+          <div class="card-label">Solo Vision</div>
+          <ul id="visionList"></ul>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Live Board</span>
+            <h2 data-i18n="marketsTitle">لوحة الأسواق</h2>
+          </div>
+          <div class="session-pill" id="sessionState">Dubai UTC+4</div>
+        </div>
+        <div class="market-grid" id="marketGrid"></div>
+      </section>
+
+      <section class="section-block split-layout">
+        <div class="news-panel">
+          <div class="section-head compact">
+            <div>
+              <span class="section-kicker">News</span>
+              <h2 data-i18n="newsTitle">الأخبار المختارة</h2>
+            </div>
+            <select id="assetFilter" aria-label="Asset filter">
+              <option value="all">All</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="oil">Oil</option>
+              <option value="equities">Equities</option>
+            </select>
+          </div>
+          <div class="news-list" id="newsList"></div>
+        </div>
+
+        <aside class="scenario-panel">
+          <span class="section-kicker">Scenarios</span>
+          <h2 data-i18n="scenarioTitle">سيناريوهات العمل</h2>
+          <div id="scenarioList"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div>SoloSophy — The Art of Investment</div>
+    <div>حيث تلتقي الرؤية بالفن، ويتحوّل الإلهام إلى استثمار</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
