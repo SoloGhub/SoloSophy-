@@ -1,0 +1,2 @@
+# SoloSophy-
+SoloSophy app
