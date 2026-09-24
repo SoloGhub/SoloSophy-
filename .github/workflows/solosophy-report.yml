@@ -1,0 +1,34 @@
+name: Build source-preserving SoloSophy report
+on:
+  push:
+    branches: [main]
+    paths: ['publication/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: solosophy-report-build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and build the preserved report
+        run: |
+          python3 publication/build.py
+          python3 publication/check_release.py
+          mkdir -p docs/source docs/docs docs/data
+          cp publication/index.html publication/listen.html publication/manifest.json publication/audit.json docs/
+          cp publication/source/WarrenAI_2026-09-24_original.md publication/source/claims_registry.json docs/source/
+          cp publication/docs/INTEGRATION_CONTRACT_AR.md docs/docs/
+          cp publication/data/preservation_check.json docs/data/
+          touch docs/.nojekyll
+      - name: Commit generated public files without changing the earlier prototype
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Build reviewed report files for GitHub Pages'
+          git push origin HEAD:main
