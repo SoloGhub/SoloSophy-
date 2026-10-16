@@ -7,4 +7,5 @@ If no request text is present, produce a `snapshot` for ALL assets.
 - `full` → follow `ops/prompts/full.md`, SLOT `on_demand_<HHMM>`, FULL = True.
 - `asset` → full depth for the named asset only (analysts, positioning, options, analogs), SLOT `on_demand_<asset>_<HHMM>`.
 - `event` → follow `ops/prompts/event_alert.md` for the event in `note` (T-30 if it is in the future, T+1 if already released).
+If the `note` contains the word TEST (pipeline test), use SLOT `test_<HHMM>` instead — test reports are archived but never become the headline report.
 Validate → publish → final Arabic summary with the link.

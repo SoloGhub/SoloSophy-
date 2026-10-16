@@ -161,8 +161,9 @@ class Kit:
         out.mkdir(parents=True, exist_ok=True)
         report.setdefault('schema', 'solosophy.report.v1')
         report.setdefault('type', slot)
-        pref = next((k for k in ('on_demand', 'alert_watch', 'alert_t30', 'alert_t1') if slot.startswith(k)), slot)
-        report.setdefault('type_ar', SLOT_AR.get(slot) or SLOT_AR.get(pref) or ('تنبيه حركة سعرية' if pref == 'alert_watch' else slot))
+        pref = next((k for k in ('on_demand', 'alert_watch', 'alert_t30', 'alert_t1', 'test') if slot.startswith(k)), slot)
+        report.setdefault('type_ar', SLOT_AR.get(slot) or SLOT_AR.get(pref) or
+                          {'alert_watch': 'تنبيه حركة سعرية', 'test': 'تشغيل تجريبي (لا يُعتمد)'}.get(pref, slot))
         report.setdefault('id', f'{self.date}-{slot}')
         path = out / f'{slot}.json'
         json.dump(report, open(path, 'w'), ensure_ascii=False, indent=1)
@@ -172,7 +173,8 @@ class Kit:
                      path=f'data/reports/{self.date}/{slot}.json', issued=report['issued_dubai'], headline=report.get('headline', ''))
         idx['reports'] = [r for r in idx['reports'] if r['id'] != entry['id']] + [entry]
         idx['reports'].sort(key=lambda r: r['issued'], reverse=True)
-        idx['latest'] = idx['reports'][0]['path']
+        # the headline report is the newest one that is not a pipeline test
+        idx['latest'] = next((r['path'] for r in idx['reports'] if not str(r['type']).startswith('test')), idx['reports'][0]['path'])
         idx['updated'] = report['issued_dubai']
         json.dump(idx, open(idx_path, 'w'), ensure_ascii=False, indent=1)
         return path
