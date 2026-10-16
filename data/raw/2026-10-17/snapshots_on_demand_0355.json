@@ -1,0 +1,41 @@
+{
+ "captured_at_utc": "2026-10-16T23:55:00Z",
+ "source": "IBKR MCP get_price_snapshot — on-demand run 03:55 Dubai (futures FROZEN = Friday close; SOXL after-hours print)",
+ "GC": {
+  "last": 4186.7,
+  "ts_dubai": "2026-10-17T00:59:59+04:00",
+  "status": "FROZEN",
+  "oi": 320217,
+  "iv": 0.20166648529875564
+ },
+ "SI": {
+  "last": 57.135,
+  "ts_dubai": "2026-10-17T00:59:57+04:00",
+  "status": "FROZEN",
+  "oi": 85816,
+  "iv": 0.34343746138138087
+ },
+ "HG": {
+  "last": 6.562,
+  "ts_dubai": "2026-10-17T00:59:33+04:00",
+  "status": "FROZEN",
+  "oi": 157473,
+  "iv": 0.2037445615830972
+ },
+ "CL": {
+  "last": 99.04,
+  "ts_dubai": "2026-10-17T00:59:58+04:00",
+  "status": "FROZEN",
+  "oi": 309217,
+  "iv": 0.46124333498459613
+ },
+ "SOXL": {
+  "last": 94.14,
+  "ts_dubai": "2026-10-17T03:54:40+04:00",
+  "status": "REALTIME",
+  "change_pct": -12.31,
+  "volume": 115121353,
+  "iv": 1.2422150722882719,
+  "note": "after-hours print; reference close (RTH) 93.67 kept in levels.json"
+ }
+}
