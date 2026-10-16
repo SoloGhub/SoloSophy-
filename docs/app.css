@@ -315,8 +315,21 @@ label{font-weight:700;font-size:14px;display:block;margin:10px 0 4px}
   .plaque{min-width:128px}
 }
 @media print{
-  .nav,.ticker,.noprint,#view-listen,#view-generate{display:none!important}
-  body{background:#fff}
-  .sec{break-inside:avoid;box-shadow:none}
-  .hdr,.ftr,.sec-h{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{size:A4;margin:8mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .nav,.ticker,.noprint,#view-listen,#view-generate,#view-alerts,#view-engine,#view-archive,.asset-tabs,.hero .imgwrap{display:none!important}
+  html{direction:ltr}
+  body{direction:rtl}
+  html,body{width:auto;background:#f7f4ed}
+  .wrap{width:auto!important;margin:0!important}
+  .hdr{margin-top:0}
+  .sec{box-shadow:none;break-inside:auto}
+  .sec-h,.card,.setup,.rung,.pcard,.geo,.sess,.lvl,.drv,tr{break-inside:avoid}
+  .hero{grid-template-columns:1fr}
+  .print-asset{break-before:page}
+  .print-asset:first-child{break-before:auto}
+  .tblwrap{overflow:visible}
+  .tbl th{position:static}
+  .grid.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .pcard .px{font-size:20px}
 }

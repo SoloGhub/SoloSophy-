@@ -194,6 +194,19 @@
   function renderAsset() {
     const r = S.report, a = (r.assets || []).find((x) => x.code === S.asset); if (!a) return;
     $$('#deep .asset-tabs .plaque').forEach((p) => p.classList.toggle('sel', p.dataset.asset === S.asset));
+    $('#assetBody').innerHTML = assetHTML(a);
+  }
+  function printAll() {
+    if (!S.report || !$('#assetBody')) return;
+    $('#assetBody').innerHTML = (S.report.assets || []).map((a) => `<div class="print-asset">${assetHTML(a)}</div>`).join('');
+    $$('details').forEach((d) => d.setAttribute('open', ''));
+  }
+  window.__soloPrintAll = printAll;
+  window.addEventListener('beforeprint', printAll);
+  window.addEventListener('afterprint', () => { renderAsset(); });
+  function assetHTML(a) {
+    a.drivers = a.drivers || []; a.analysts = a.analysts || []; a.indicators = a.indicators || []; a.setups = a.setups || [];
+    a.control = a.control || { resist: [], support: [] };
     const p = a.price, L = a.ladder;
     const lvRow = (cls, k, v, n, w) => `<div class="lvl ${cls}"><span class="k">${k}</span><div><div class="v">${esc(v)}</div><div class="small muted">${esc(n)}</div></div><div class="bar" style="width:${w}%"></div></div>`;
     const res = a.control.resist.slice().reverse().map(([v, n], i, arr) => lvRow('r', 'مقاومة ' + (arr.length - i), v, n, 40 + (arr.length - i) * 12)).join('');
@@ -206,7 +219,7 @@
       <div class="cond">الشرط: ${esc(s.condition)}</div><div class="small muted">المخاطرة <span class="num">${fmt(s.risk, a.code)}</span> · العائد/المخاطرة: الهدف 1 <span class="num">${s.rr[0].toFixed(2)}</span> · الهدف 2 <span class="num">${s.rr[1].toFixed(2)}</span> · إزاحة <span class="num">${fmt(s.raw.offset, a.code, DEC[a.code] + 1)}</span> (10% ATR)</div>${s.note ? `<div class="note">${esc(s.note)}</div>` : ''}</div>`;
     const an = a.analog || {};
     const pos = a.positioning;
-    $('#assetBody').innerHTML = `
+    return `
       <div class="subh"><img src="assets/icons/compass.svg" alt=""><h3>إحنا فين — ${esc(a.name)} <span class="small muted">${esc(a.contract)}</span></h3><span class="tag ${a.tag}" style="margin-inline-start:auto">${esc(a.tag_ar)}</span></div>
       <p class="lead">${esc(a.where)}</p>
       <div class="facts"><div class="fact"><small>الإغلاق (Last)</small><b>${fmt(p.last, a.code)}</b></div><div class="fact"><small>اليوم · الأسبوع</small><b style="direction:rtl">${pcs(p.day)} · ${pcs(p.week)}</b></div><div class="fact"><small>نطاق الأسبوع</small><b>${fmt(p.week_low, a.code)} – ${fmt(p.week_high, a.code)}</b></div><div class="fact"><small>إغلاق الأسبوع السابق</small><b>${fmt(p.prev_week_close, a.code)}</b></div>
