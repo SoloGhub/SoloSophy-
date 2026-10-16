@@ -1,0 +1,17 @@
+{
+  "run_utc": "2026-10-16T23:28:52Z",
+  "repo_found": {
+    "value": true,
+    "how": "Already present as working directory /home/claude/solosophy-; git remote -v -> origin https://github.com/SoloGhub/solosophy- (fetch/push); branch main tracking origin/main. No clone or add_repo needed."
+  },
+  "ibkr_ok": true,
+  "ibkr_raw": {"last":{"price":4186.7,"ts":1792184399,"halted":false,"is_close":false},"top-status":{"status":"FROZEN"},"change":{"change":16.599999999999454,"change_pct":0.4}},
+  "ibkr_request": {"tool": "get_price_snapshot", "contract_id": 462941472, "exchange": "COMEX", "market_data_names": ["last","change","top_status"]},
+  "tools_seen": {
+    "ibkr_read_used": ["get_price_snapshot"],
+    "ibkr_available": ["get_price_snapshot","get_price_history","search_contracts","search_futures","get_option_data","get_option_parameters","get_account_summary","get_account_balances","get_account_positions","get_account_orders","get_account_trades","get_alerts","get_alert","get_watchlists","get_watchlist","get_order_instructions","get_combo_identifier","get_company_connections","get_company_themes","get_flow_type","get_pa_allocation","get_pa_performance_all_periods","get_saved_screener","list_saved_screeners","run_saved_screener","get_theme_details","search_investment_topics","whats_new","provide_customer_feedback","create_alert","update_alert","delete_alert","set_alert_status","create_watchlist","edit_watchlist","delete_watchlist","create_order_instruction","delete_order_instruction"],
+    "ibkr_write_tools_note": "Write tools (orders/alerts/watchlists) were visible but NOT called — read-only policy.",
+    "github_mcp": ["get_file_contents","create_or_update_file","push_files","create_branch","list_branches","create_pull_request","list_commits","search_code","get_me","..."],
+    "git_cli": "git push via HTTPS proxy"
+  }
+}
