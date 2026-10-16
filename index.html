@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SoloSophy Insights</title>
+<meta name="description" content="SoloSophy Insights — تقارير الأسواق للذهب والفضة والنحاس والنفط وأشباه الموصلات">
+<meta name="theme-color" content="#101c2b">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css?v=1">
+</head>
+<body>
+<div class="wrap">
+  <header class="hdr" id="top">
+    <div class="hdr-inner">
+      <div class="lockup">
+        <img src="assets/img/logo.webp" alt="SoloSophy">
+        <div class="company"><span class="s1">Solo</span><span class="s2">Sophy</span><small>PRIVATE WEALTH · MARKET VISION</small></div>
+      </div>
+      <div class="titleblock">
+        <div class="plaque-title"><b><i>Solo</i>Sophy insights</b><span id="edition">Market Vision Edition</span></div>
+        <div class="slogan" id="slogan">The Art of Investment — When an Idea Transforms Your Entire Wealth</div>
+      </div>
+    </div>
+    <div class="hdr-meta" id="hdrMeta"><span>جارِ التحميل…</span></div>
+  </header>
+</div>
+
+<nav class="nav" aria-label="أقسام التطبيق">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" data-view="report" aria-selected="true"><img src="assets/icons/compass.svg" alt="">التقرير</button>
+    <button class="tab" role="tab" data-view="alerts"><img src="assets/icons/clock.svg" alt="">التنبيهات والأجندة</button>
+    <button class="tab" role="tab" data-view="engine"><img src="assets/icons/levels.svg" alt="">مختبر المحرك</button>
+    <button class="tab" role="tab" data-view="archive"><img src="assets/icons/news.svg" alt="">الأرشيف</button>
+    <button class="tab" role="tab" data-view="listen"><img src="assets/icons/chat.svg" alt="">استمع</button>
+    <button class="tab cta" role="tab" data-view="generate"><img src="assets/icons/monitor.svg" alt="">اطلب تقرير الآن</button>
+    <button class="tab noprint" id="printBtn" title="حفظ PDF"><img src="assets/icons/print.svg" alt="">PDF</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="ticker" id="ticker"><div class="lbl"><img src="assets/icons/news.svg" alt="">ما الذي تغيّر</div><div class="track"><div class="run" id="tickerRun"></div></div></div>
+  <section id="view-report" class="view"></section>
+  <section id="view-alerts" class="view hide"></section>
+  <section id="view-engine" class="view hide"></section>
+  <section id="view-archive" class="view hide"></section>
+  <section id="view-listen" class="view hide"></section>
+  <section id="view-generate" class="view hide"></section>
+
+  <footer class="ftr">
+    <img src="assets/img/signature.png" alt="Ahmed Soliman">
+    <div>
+      <div class="tl">The Art of Timing — The Science of Wealth.</div>
+      <div class="disc" id="disclaimer">هذا التقرير لأغراض المعلومات والتحليل فقط ولا يمثل توصية شخصية.</div>
+    </div>
+  </footer>
+</main>
+<script src="app.js?v=1"></script>
+</body>
+</html>

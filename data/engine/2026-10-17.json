@@ -1,0 +1,5501 @@
+{
+ "schema": "solosophy.engine_lab.v1",
+ "engine": "CME Engine v0.3 (audited research)",
+ "generated_at_utc": "2026-10-16T23:44:39.341479+00:00",
+ "run_status": "research_only_live_blocked",
+ "ruleset_version": "v0.3-audited-research",
+ "ruleset_validated": false,
+ "probabilities_withheld": true,
+ "input_fingerprint": "b3cdf64dbe7c904d5e908745a876a8d00556951cde2663cf2ad7a324c1a37c67",
+ "ruleset_fingerprint": "b1085611c69eacdbf9f689dcf6477a5bb6667954962ae8c68ab005a9f924ed70",
+ "coverage": [
+  {
+   "dataset": "gc_30m_merged",
+   "decision": "accept_with_limits",
+   "blocking": [],
+   "warnings": [
+    "raw_gaps_require_exchange_calendar_classification"
+   ]
+  },
+  {
+   "dataset": "gc_daily_5y",
+   "decision": "accept_with_limits",
+   "blocking": [],
+   "warnings": [
+    "chart_end_does_not_match_bar_timestamps",
+    "full_history_volume_not_reliable",
+    "impossible_ohlc_quarantined",
+    "raw_gaps_require_exchange_calendar_classification"
+   ]
+  },
+  {
+   "dataset": "gc_hourly_merged",
+   "decision": "accept_with_limits",
+   "blocking": [],
+   "warnings": [
+    "raw_gaps_require_exchange_calendar_classification"
+   ]
+  },
+  {
+   "dataset": "si_30m_merged",
+   "decision": "accept_with_limits",
+   "blocking": [],
+   "warnings": [
+    "raw_gaps_require_exchange_calendar_classification"
+   ]
+  },
+  {
+   "dataset": "si_daily_5y",
+   "decision": "quarantine",
+   "blocking": [
+    "insufficient_reliable_analysis_bars"
+   ],
+   "warnings": [
+    "chart_end_does_not_match_bar_timestamps",
+    "chart_start_does_not_match_bar_timestamps",
+    "full_history_volume_not_reliable",
+    "impossible_ohlc_quarantined",
+    "raw_gaps_require_exchange_calendar_classification"
+   ]
+  },
+  {
+   "dataset": "si_hourly_merged",
+   "decision": "accept_with_limits",
+   "blocking": [],
+   "warnings": [
+    "full_history_volume_not_reliable",
+    "raw_gaps_require_exchange_calendar_classification"
+   ]
+  }
+ ],
+ "assets": {
+  "GC": {
+   "timeframes": {
+    "thirty_minute": {
+     "tf_ar": "30 دقيقة",
+     "state": "range_or_low_trend_strength",
+     "state_ar": "نطاق عرضي / اتجاه ضعيف",
+     "volatility": "normal_relative_to_sample",
+     "volatility_ar": "تقلّب طبيعي مقارنةً بالعيّنة",
+     "data_cutoff_utc": "2026-10-16T20:30:00+00:00",
+     "quality": "accept_with_limits",
+     "observations": {
+      "close": 4186.7,
+      "ema_12": 4188.3,
+      "ema_26": 4190.485,
+      "sma_50": 4192.166,
+      "sma_200": 4179.214,
+      "rsi_14": 47.1722,
+      "adx_14": 13.5496,
+      "plus_di_14": 23.0059,
+      "minus_di_14": 22.2064,
+      "atr_14": 9.6599,
+      "support_20": 4175.3,
+      "resistance_20": 4220.4,
+      "zscore_20": -0.4364
+     },
+     "live_blocking": [
+      "exchange_calendar_not_loaded",
+      "gaps_not_classified_against_exchange_calendar",
+      "last_closed_bar_is_stale",
+      "price_series_construction_unverified"
+     ]
+    },
+    "daily": {
+     "tf_ar": "يومي",
+     "state": "trend_down_weak",
+     "state_ar": "اتجاه هابط ضعيف",
+     "volatility": "compression",
+     "volatility_ar": "انضغاط تقلّب",
+     "data_cutoff_utc": "2026-10-15T22:00:00+00:00",
+     "quality": "accept_with_limits",
+     "observations": {
+      "close": 4186.7,
+      "ema_12": 4186.7514,
+      "ema_26": 4242.8961,
+      "sma_50": 4374.526,
+      "sma_200": 4621.1135,
+      "rsi_14": 43.9911,
+      "adx_14": 20.4122,
+      "plus_di_14": 14.4146,
+      "minus_di_14": 21.0329,
+      "atr_14": 83.7543,
+      "support_20": 4091.2,
+      "resistance_20": 4439.8,
+      "zscore_20": -0.3485
+     },
+     "live_blocking": [
+      "exchange_calendar_not_loaded",
+      "gaps_not_classified_against_exchange_calendar",
+      "price_series_construction_unverified"
+     ]
+    },
+    "hourly": {
+     "tf_ar": "ساعة",
+     "state": "range_or_low_trend_strength",
+     "state_ar": "نطاق عرضي / اتجاه ضعيف",
+     "volatility": "normal_relative_to_sample",
+     "volatility_ar": "تقلّب طبيعي مقارنةً بالعيّنة",
+     "data_cutoff_utc": "2026-10-16T20:00:00+00:00",
+     "quality": "accept_with_limits",
+     "observations": {
+      "close": 4186.7,
+      "ema_12": 4189.8788,
+      "ema_26": 4187.9881,
+      "sma_50": 4175.55,
+      "sma_200": 4178.1205,
+      "rsi_14": 49.4161,
+      "adx_14": 17.3114,
+      "plus_di_14": 16.3559,
+      "minus_di_14": 21.0577,
+      "atr_14": 14.4988,
+      "support_20": 4167.5,
+      "resistance_20": 4220.4,
+      "zscore_20": -0.7359
+     },
+     "live_blocking": [
+      "exchange_calendar_not_loaded",
+      "gaps_not_classified_against_exchange_calendar",
+      "last_closed_bar_is_stale",
+      "price_series_construction_unverified"
+     ]
+    }
+   },
+   "consensus": {
+    "dirs": {
+     "daily": {
+      "v": "down",
+      "ar": "هابط"
+     },
+     "hourly": {
+      "v": "neutral",
+      "ar": "محايد"
+     },
+     "thirty_minute": {
+      "v": "neutral",
+      "ar": "محايد"
+     }
+    },
+    "value": "partial_down_alignment",
+    "ar": "توافق هبوطي جزئي"
+   },
+   "rules": {
+    "thirty_minute": {
+     "survivors": [],
+     "rules": [
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3382,
+        "signals": 2850,
+        "coverage": 0.8427,
+        "hit": 0.5039,
+        "lo": 0.4716,
+        "hi": 0.5361,
+        "avg_ret": 0.0001,
+        "med_ret": 2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1450,
+        "signals": 1182,
+        "coverage": 0.8152,
+        "hit": 0.4966,
+        "lo": 0.4468,
+        "hi": 0.5465,
+        "avg_ret": -7e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1691,
+        "signals": 1419,
+        "coverage": 0.8391,
+        "hit": 0.5194,
+        "lo": 0.4737,
+        "hi": 0.5647,
+        "avg_ret": 0.00019,
+        "med_ret": 0.0001,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 725,
+        "signals": 592,
+        "coverage": 0.8166,
+        "hit": 0.4544,
+        "lo": 0.3855,
+        "hi": 0.5251,
+        "avg_ret": -0.0002,
+        "med_ret": -0.00025,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 845,
+        "signals": 707,
+        "coverage": 0.8367,
+        "hit": 0.5191,
+        "lo": 0.4546,
+        "hi": 0.583,
+        "avg_ret": 0.00033,
+        "med_ret": 0.00014,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 362,
+        "signals": 304,
+        "coverage": 0.8398,
+        "hit": 0.4836,
+        "lo": 0.3873,
+        "hi": 0.5811,
+        "avg_ret": -0.00031,
+        "med_ret": -0.00012,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 422,
+        "signals": 354,
+        "coverage": 0.8389,
+        "hit": 0.5,
+        "lo": 0.4099,
+        "hi": 0.5901,
+        "avg_ret": 0.00026,
+        "med_ret": 1e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 181,
+        "signals": 152,
+        "coverage": 0.8398,
+        "hit": 0.4934,
+        "lo": 0.3593,
+        "hi": 0.6285,
+        "avg_ret": -0.00045,
+        "med_ret": -6e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 211,
+        "signals": 176,
+        "coverage": 0.8341,
+        "hit": 0.5795,
+        "lo": 0.4503,
+        "hi": 0.6987,
+        "avg_ret": 0.00099,
+        "med_ret": 0.00115,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 79,
+        "coverage": 0.8778,
+        "hit": 0.481,
+        "lo": 0.3028,
+        "hi": 0.6641,
+        "avg_ret": -0.00023,
+        "med_ret": -0.00017,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3382,
+        "signals": 261,
+        "coverage": 0.0772,
+        "hit": 0.5211,
+        "lo": 0.4159,
+        "hi": 0.6244,
+        "avg_ret": -0.00015,
+        "med_ret": 0.00014,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1450,
+        "signals": 95,
+        "coverage": 0.0655,
+        "hit": 0.5158,
+        "lo": 0.3474,
+        "hi": 0.6806,
+        "avg_ret": 0.0001,
+        "med_ret": 7e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1691,
+        "signals": 135,
+        "coverage": 0.0798,
+        "hit": 0.4444,
+        "lo": 0.3076,
+        "hi": 0.5903,
+        "avg_ret": -0.00056,
+        "med_ret": -0.00027,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 725,
+        "signals": 49,
+        "coverage": 0.0676,
+        "hit": 0.6327,
+        "lo": 0.3923,
+        "hi": 0.8213,
+        "avg_ret": 0.00083,
+        "med_ret": 0.00086,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 845,
+        "signals": 65,
+        "coverage": 0.0769,
+        "hit": 0.4,
+        "lo": 0.2223,
+        "hi": 0.6086,
+        "avg_ret": -0.00124,
+        "med_ret": -0.00079,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 362,
+        "signals": 27,
+        "coverage": 0.0746,
+        "hit": 0.6296,
+        "lo": 0.3202,
+        "hi": 0.8599,
+        "avg_ret": 0.00066,
+        "med_ret": 0.00099,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 422,
+        "signals": 32,
+        "coverage": 0.0758,
+        "hit": 0.3438,
+        "lo": 0.1353,
+        "hi": 0.6368,
+        "avg_ret": -0.0018,
+        "med_ret": -0.00193,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 181,
+        "signals": 15,
+        "coverage": 0.0829,
+        "hit": 0.6,
+        "lo": 0.2272,
+        "hi": 0.8845,
+        "avg_ret": 0.00072,
+        "med_ret": 0.00213,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 211,
+        "signals": 20,
+        "coverage": 0.0948,
+        "hit": 0.35,
+        "lo": 0.1094,
+        "hi": 0.7024,
+        "avg_ret": 0.00146,
+        "med_ret": -0.002,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 9,
+        "coverage": 0.1,
+        "hit": 0.5556,
+        "lo": 0.1478,
+        "hi": 0.9001,
+        "avg_ret": 0.00029,
+        "med_ret": 0.00245,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3382,
+        "signals": 291,
+        "coverage": 0.086,
+        "hit": 0.4261,
+        "lo": 0.331,
+        "hi": 0.527,
+        "avg_ret": -0.00037,
+        "med_ret": -0.00023,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1450,
+        "signals": 106,
+        "coverage": 0.0731,
+        "hit": 0.5189,
+        "lo": 0.3584,
+        "hi": 0.6756,
+        "avg_ret": -0.00016,
+        "med_ret": 0.00012,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1691,
+        "signals": 147,
+        "coverage": 0.0869,
+        "hit": 0.4966,
+        "lo": 0.3601,
+        "hi": 0.6336,
+        "avg_ret": -6e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 725,
+        "signals": 56,
+        "coverage": 0.0772,
+        "hit": 0.5179,
+        "lo": 0.3057,
+        "hi": 0.7238,
+        "avg_ret": 8e-05,
+        "med_ret": 4e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 845,
+        "signals": 72,
+        "coverage": 0.0852,
+        "hit": 0.5278,
+        "lo": 0.3359,
+        "hi": 0.7117,
+        "avg_ret": 0.00018,
+        "med_ret": 0.00025,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 362,
+        "signals": 21,
+        "coverage": 0.058,
+        "hit": 0.4286,
+        "lo": 0.1558,
+        "hi": 0.7529,
+        "avg_ret": -0.00044,
+        "med_ret": -0.00062,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 422,
+        "signals": 34,
+        "coverage": 0.0806,
+        "hit": 0.4412,
+        "lo": 0.2033,
+        "hi": 0.7095,
+        "avg_ret": -0.00111,
+        "med_ret": -0.00183,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 181,
+        "signals": 14,
+        "coverage": 0.0773,
+        "hit": 0.5,
+        "lo": 0.1613,
+        "hi": 0.8387,
+        "avg_ret": 6e-05,
+        "med_ret": -0.00093,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 211,
+        "signals": 17,
+        "coverage": 0.0806,
+        "hit": 0.5882,
+        "lo": 0.2342,
+        "hi": 0.8697,
+        "avg_ret": -0.00234,
+        "med_ret": 0.00027,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 6,
+        "coverage": 0.0667,
+        "hit": 0.6667,
+        "lo": 0.1561,
+        "hi": 0.9558,
+        "avg_ret": 0.00026,
+        "med_ret": 0.00194,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3382,
+        "signals": 1971,
+        "coverage": 0.5828,
+        "hit": 0.4876,
+        "lo": 0.449,
+        "hi": 0.5263,
+        "avg_ret": -1e-05,
+        "med_ret": -2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1450,
+        "signals": 653,
+        "coverage": 0.4503,
+        "hit": 0.5176,
+        "lo": 0.4505,
+        "hi": 0.5841,
+        "avg_ret": -3e-05,
+        "med_ret": 5e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1691,
+        "signals": 984,
+        "coverage": 0.5819,
+        "hit": 0.5081,
+        "lo": 0.4534,
+        "hi": 0.5626,
+        "avg_ret": 0.0001,
+        "med_ret": 5e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 725,
+        "signals": 328,
+        "coverage": 0.4524,
+        "hit": 0.5,
+        "lo": 0.4065,
+        "hi": 0.5935,
+        "avg_ret": 2e-05,
+        "med_ret": 1e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 845,
+        "signals": 487,
+        "coverage": 0.5763,
+        "hit": 0.4908,
+        "lo": 0.4138,
+        "hi": 0.5681,
+        "avg_ret": 7e-05,
+        "med_ret": -2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 362,
+        "signals": 163,
+        "coverage": 0.4503,
+        "hit": 0.5521,
+        "lo": 0.419,
+        "hi": 0.6782,
+        "avg_ret": 0.00019,
+        "med_ret": 0.0004,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 422,
+        "signals": 243,
+        "coverage": 0.5758,
+        "hit": 0.4856,
+        "lo": 0.3784,
+        "hi": 0.5942,
+        "avg_ret": -4e-05,
+        "med_ret": -5e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 181,
+        "signals": 83,
+        "coverage": 0.4586,
+        "hit": 0.5301,
+        "lo": 0.3497,
+        "hi": 0.703,
+        "avg_ret": 0.00029,
+        "med_ret": 0.0004,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 211,
+        "signals": 120,
+        "coverage": 0.5687,
+        "hit": 0.5333,
+        "lo": 0.3806,
+        "hi": 0.6801,
+        "avg_ret": 3e-05,
+        "med_ret": 0.0003,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 41,
+        "coverage": 0.4556,
+        "hit": 0.5366,
+        "lo": 0.2919,
+        "hi": 0.7648,
+        "avg_ret": 0.00064,
+        "med_ret": 0.00069,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      }
+     ],
+     "walk_forward": {
+      "status": "walk_forward_validation_complete",
+      "stable_edge_horizons": [],
+      "blockers": [
+       "transaction_costs_not_included",
+       "execution_not_simulated",
+       "prospective_shadow_sample_not_accumulated",
+       "history_inspected_in_prior_development",
+       "source_calendar_and_series_construction_unverified"
+      ],
+      "folds": [
+       {
+        "horizon": 1,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 724,
+        "signals": 428,
+        "coverage": 0.5912,
+        "hit": 0.493,
+        "lo": 0.411,
+        "hi": 0.5753,
+        "avg_ret": 1e-05,
+        "med_ret": -2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 724,
+        "signals": 409,
+        "coverage": 0.5649,
+        "hit": 0.4914,
+        "lo": 0.4077,
+        "hi": 0.5757,
+        "avg_ret": 6e-05,
+        "med_ret": -2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 3,
+        "test_start": "2026-09-02",
+        "test_end": "2026-09-25",
+        "eligible": 724,
+        "signals": 324,
+        "coverage": 0.4475,
+        "hit": 0.5062,
+        "lo": 0.4119,
+        "hi": 0.6,
+        "avg_ret": -0.00014,
+        "med_ret": 2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 725,
+        "signals": 329,
+        "coverage": 0.4538,
+        "hit": 0.5289,
+        "lo": 0.4347,
+        "hi": 0.6211,
+        "avg_ret": 7e-05,
+        "med_ret": 0.00012,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 362,
+        "signals": 216,
+        "coverage": 0.5967,
+        "hit": 0.4398,
+        "lo": 0.3296,
+        "hi": 0.5563,
+        "avg_ret": -5e-05,
+        "med_ret": -0.00032,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 362,
+        "signals": 205,
+        "coverage": 0.5663,
+        "hit": 0.5366,
+        "lo": 0.4179,
+        "hi": 0.6513,
+        "avg_ret": 0.00024,
+        "med_ret": 0.00014,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 3,
+        "test_start": "2026-09-02",
+        "test_end": "2026-09-25",
+        "eligible": 362,
+        "signals": 164,
+        "coverage": 0.453,
+        "hit": 0.4817,
+        "lo": 0.3531,
+        "hi": 0.6128,
+        "avg_ret": -0.00028,
+        "med_ret": -0.00011,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 362,
+        "signals": 165,
+        "coverage": 0.4558,
+        "hit": 0.5212,
+        "lo": 0.3903,
+        "hi": 0.6492,
+        "avg_ret": -0.0,
+        "med_ret": 0.00012,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 4,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 181,
+        "signals": 109,
+        "coverage": 0.6022,
+        "hit": 0.4404,
+        "lo": 0.2905,
+        "hi": 0.602,
+        "avg_ret": 8e-05,
+        "med_ret": -0.00063,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 4,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 181,
+        "signals": 106,
+        "coverage": 0.5856,
+        "hit": 0.5189,
+        "lo": 0.3584,
+        "hi": 0.6756,
+        "avg_ret": 0.00038,
+        "med_ret": 0.00015,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 4,
+        "fold": 3,
+        "test_start": "2026-09-02",
+        "test_end": "2026-09-25",
+        "eligible": 181,
+        "signals": 85,
+        "coverage": 0.4696,
+        "hit": 0.5294,
+        "lo": 0.351,
+        "hi": 0.7006,
+        "avg_ret": -0.00019,
+        "med_ret": 0.00027,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 181,
+        "signals": 81,
+        "coverage": 0.4475,
+        "hit": 0.5185,
+        "lo": 0.3375,
+        "hi": 0.6948,
+        "avg_ret": 0.00011,
+        "med_ret": 7e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-11",
+        "eligible": 90,
+        "signals": 55,
+        "coverage": 0.6111,
+        "hit": 0.4545,
+        "lo": 0.2526,
+        "hi": 0.6726,
+        "avg_ret": 0.00027,
+        "med_ret": -0.00037,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 90,
+        "signals": 51,
+        "coverage": 0.5667,
+        "hit": 0.5294,
+        "lo": 0.3068,
+        "hi": 0.7409,
+        "avg_ret": 0.00054,
+        "med_ret": 0.00011,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 3,
+        "test_start": "2026-09-02",
+        "test_end": "2026-09-24",
+        "eligible": 90,
+        "signals": 41,
+        "coverage": 0.4556,
+        "hit": 0.5122,
+        "lo": 0.2725,
+        "hi": 0.7464,
+        "avg_ret": -1e-05,
+        "med_ret": 9e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 90,
+        "signals": 37,
+        "coverage": 0.4111,
+        "hit": 0.4324,
+        "lo": 0.2041,
+        "hi": 0.6936,
+        "avg_ret": -0.00019,
+        "med_ret": -0.0006,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-11",
+        "eligible": 45,
+        "signals": 33,
+        "coverage": 0.7333,
+        "hit": 0.4848,
+        "lo": 0.2317,
+        "hi": 0.746,
+        "avg_ret": 0.00041,
+        "med_ret": -2e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 45,
+        "signals": 27,
+        "coverage": 0.6,
+        "hit": 0.5556,
+        "lo": 0.2634,
+        "hi": 0.8138,
+        "avg_ret": 0.00024,
+        "med_ret": 0.00106,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 3,
+        "test_start": "2026-09-02",
+        "test_end": "2026-09-24",
+        "eligible": 45,
+        "signals": 21,
+        "coverage": 0.4667,
+        "hit": 0.5238,
+        "lo": 0.2149,
+        "hi": 0.8155,
+        "avg_ret": -4e-05,
+        "med_ret": 0.00075,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 45,
+        "signals": 17,
+        "coverage": 0.3778,
+        "hit": 0.4706,
+        "lo": 0.1623,
+        "hi": 0.803,
+        "avg_ret": 0.00053,
+        "med_ret": -0.00088,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      ]
+     }
+    },
+    "daily": {
+     "survivors": [],
+     "rules": [
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 183,
+        "signals": 121,
+        "coverage": 0.6612,
+        "hit": 0.562,
+        "lo": 0.408,
+        "hi": 0.7049,
+        "avg_ret": 0.00249,
+        "med_ret": 0.00324,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 79,
+        "signals": 64,
+        "coverage": 0.8101,
+        "hit": 0.5,
+        "lo": 0.3022,
+        "hi": 0.6978,
+        "avg_ret": -0.00065,
+        "med_ret": -0.00031,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 5,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 36,
+        "signals": 23,
+        "coverage": 0.6389,
+        "hit": 0.5652,
+        "lo": 0.2529,
+        "hi": 0.8331,
+        "avg_ret": 0.00938,
+        "med_ret": 0.00807,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 15,
+        "signals": 13,
+        "coverage": 0.8667,
+        "hit": 0.4615,
+        "lo": 0.135,
+        "hi": 0.8249,
+        "avg_ret": -0.00658,
+        "med_ret": -0.00813,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 183,
+        "signals": 17,
+        "coverage": 0.0929,
+        "hit": 0.3529,
+        "lo": 0.101,
+        "hi": 0.7258,
+        "avg_ret": -0.00287,
+        "med_ret": -0.00489,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 79,
+        "signals": 4,
+        "coverage": 0.0506,
+        "hit": 0.5,
+        "lo": 0.0675,
+        "hi": 0.9325,
+        "avg_ret": -0.0016,
+        "med_ret": -0.00158,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 5,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 36,
+        "signals": 3,
+        "coverage": 0.0833,
+        "hit": 1.0,
+        "lo": 0.2016,
+        "hi": 1.0,
+        "avg_ret": 0.06006,
+        "med_ret": 0.05458,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 15,
+        "signals": 1,
+        "coverage": 0.0667,
+        "hit": 0.0,
+        "lo": 0.0,
+        "hi": 0.9223,
+        "avg_ret": -0.00278,
+        "med_ret": -0.00278,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 183,
+        "signals": 16,
+        "coverage": 0.0874,
+        "hit": 0.6875,
+        "lo": 0.2947,
+        "hi": 0.9205,
+        "avg_ret": 0.00374,
+        "med_ret": 0.00215,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 79,
+        "signals": 5,
+        "coverage": 0.0633,
+        "hit": 0.6,
+        "lo": 0.1127,
+        "hi": 0.9466,
+        "avg_ret": 0.00239,
+        "med_ret": 0.00367,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 5,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 36,
+        "signals": 1,
+        "coverage": 0.0278,
+        "hit": 0.0,
+        "lo": 0.0,
+        "hi": 0.9223,
+        "avg_ret": -0.09338,
+        "med_ret": -0.09338,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 15,
+        "signals": 2,
+        "coverage": 0.1333,
+        "hit": 0.5,
+        "lo": 0.0374,
+        "hi": 0.9626,
+        "avg_ret": -0.01183,
+        "med_ret": -0.01183,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 183,
+        "signals": 73,
+        "coverage": 0.3989,
+        "hit": 0.5205,
+        "lo": 0.3308,
+        "hi": 0.7046,
+        "avg_ret": 0.00034,
+        "med_ret": 0.00143,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 79,
+        "signals": 48,
+        "coverage": 0.6076,
+        "hit": 0.5417,
+        "lo": 0.3113,
+        "hi": 0.7555,
+        "avg_ret": -0.00122,
+        "med_ret": 0.00054,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 5,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 36,
+        "signals": 11,
+        "coverage": 0.3056,
+        "hit": 0.3636,
+        "lo": 0.0807,
+        "hi": 0.7882,
+        "avg_ret": -0.00265,
+        "med_ret": -0.02201,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 15,
+        "signals": 11,
+        "coverage": 0.7333,
+        "hit": 0.4545,
+        "lo": 0.1186,
+        "hi": 0.8377,
+        "avg_ret": -0.00501,
+        "med_ret": -0.00278,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      }
+     ],
+     "walk_forward": {
+      "status": "walk_forward_validation_complete",
+      "stable_edge_horizons": [],
+      "blockers": [
+       "transaction_costs_not_included",
+       "execution_not_simulated",
+       "prospective_shadow_sample_not_accumulated",
+       "history_inspected_in_prior_development",
+       "source_calendar_and_series_construction_unverified"
+      ],
+      "folds": [
+       {
+        "horizon": 1,
+        "fold": 1,
+        "test_start": "2026-07-19",
+        "test_end": "2026-08-06",
+        "eligible": 15,
+        "signals": 13,
+        "coverage": 0.8667,
+        "hit": 0.4615,
+        "lo": 0.135,
+        "hi": 0.8249,
+        "avg_ret": -0.00404,
+        "med_ret": -0.00162,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 1,
+        "fold": 2,
+        "test_start": "2026-08-10",
+        "test_end": "2026-08-30",
+        "eligible": 15,
+        "signals": 15,
+        "coverage": 1.0,
+        "hit": 0.5333,
+        "lo": 0.1866,
+        "hi": 0.8506,
+        "avg_ret": -0.00057,
+        "med_ret": 0.0023,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 1,
+        "fold": 3,
+        "test_start": "2026-09-01",
+        "test_end": "2026-09-22",
+        "eligible": 15,
+        "signals": 1,
+        "coverage": 0.0667,
+        "hit": 0.0,
+        "lo": 0.0,
+        "hi": 0.9223,
+        "avg_ret": -0.01394,
+        "med_ret": -0.01394,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 1,
+        "fold": 4,
+        "test_start": "2026-09-24",
+        "test_end": "2026-10-14",
+        "eligible": 15,
+        "signals": 2,
+        "coverage": 0.1333,
+        "hit": 1.0,
+        "lo": 0.1441,
+        "hi": 1.0,
+        "avg_ret": 0.00219,
+        "med_ret": 0.00219,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 5,
+        "fold": 1,
+        "test_start": "2026-07-19",
+        "test_end": "2026-08-02",
+        "eligible": 3,
+        "signals": 3,
+        "coverage": 1.0,
+        "hit": 0.3333,
+        "lo": 0.0247,
+        "hi": 0.9081,
+        "avg_ret": -0.02832,
+        "med_ret": -0.01557,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 5,
+        "fold": 2,
+        "test_start": "2026-08-10",
+        "test_end": "2026-08-24",
+        "eligible": 3,
+        "signals": 3,
+        "coverage": 1.0,
+        "hit": 0.3333,
+        "lo": 0.0247,
+        "hi": 0.9081,
+        "avg_ret": -0.00205,
+        "med_ret": -0.00462,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 5,
+        "fold": 3,
+        "test_start": "2026-09-01",
+        "test_end": "2026-09-16",
+        "eligible": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "hit": null,
+        "lo": null,
+        "hi": null,
+        "avg_ret": null,
+        "med_ret": null,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 5,
+        "fold": 4,
+        "test_start": "2026-09-24",
+        "test_end": "2026-10-08",
+        "eligible": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "hit": null,
+        "lo": null,
+        "hi": null,
+        "avg_ret": null,
+        "med_ret": null,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      ]
+     }
+    },
+    "hourly": {
+     "survivors": [],
+     "rules": [
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2909,
+        "signals": 2333,
+        "coverage": 0.802,
+        "hit": 0.4698,
+        "lo": 0.4344,
+        "hi": 0.5055,
+        "avg_ret": -4e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1247,
+        "signals": 1017,
+        "coverage": 0.8156,
+        "hit": 0.4749,
+        "lo": 0.4216,
+        "hi": 0.5289,
+        "avg_ret": -4e-05,
+        "med_ret": -0.00011,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1454,
+        "signals": 1167,
+        "coverage": 0.8026,
+        "hit": 0.473,
+        "lo": 0.4232,
+        "hi": 0.5234,
+        "avg_ret": -8e-05,
+        "med_ret": -0.00019,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 623,
+        "signals": 516,
+        "coverage": 0.8283,
+        "hit": 0.5039,
+        "lo": 0.4288,
+        "hi": 0.5788,
+        "avg_ret": -2e-05,
+        "med_ret": 4e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 727,
+        "signals": 577,
+        "coverage": 0.7937,
+        "hit": 0.4731,
+        "lo": 0.4028,
+        "hi": 0.5446,
+        "avg_ret": -7e-05,
+        "med_ret": -0.00023,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 311,
+        "signals": 256,
+        "coverage": 0.8232,
+        "hit": 0.5234,
+        "lo": 0.4172,
+        "hi": 0.6276,
+        "avg_ret": 0.00023,
+        "med_ret": 0.0002,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 121,
+        "signals": 97,
+        "coverage": 0.8017,
+        "hit": 0.4845,
+        "lo": 0.3211,
+        "hi": 0.6513,
+        "avg_ret": -0.00051,
+        "med_ret": -0.00122,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 42,
+        "coverage": 0.8235,
+        "hit": 0.4762,
+        "lo": 0.2469,
+        "hi": 0.716,
+        "avg_ret": -0.00018,
+        "med_ret": -0.0005,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2909,
+        "signals": 225,
+        "coverage": 0.0773,
+        "hit": 0.4933,
+        "lo": 0.3817,
+        "hi": 0.6056,
+        "avg_ret": 0.00011,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1247,
+        "signals": 71,
+        "coverage": 0.0569,
+        "hit": 0.507,
+        "lo": 0.3168,
+        "hi": 0.6953,
+        "avg_ret": 3e-05,
+        "med_ret": 5e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1454,
+        "signals": 111,
+        "coverage": 0.0763,
+        "hit": 0.5856,
+        "lo": 0.4239,
+        "hi": 0.7307,
+        "avg_ret": 0.00035,
+        "med_ret": 0.00097,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 623,
+        "signals": 34,
+        "coverage": 0.0546,
+        "hit": 0.5588,
+        "lo": 0.2905,
+        "hi": 0.7967,
+        "avg_ret": 0.00029,
+        "med_ret": 0.0009,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 727,
+        "signals": 45,
+        "coverage": 0.0619,
+        "hit": 0.5778,
+        "lo": 0.3352,
+        "hi": 0.7878,
+        "avg_ret": -0.00038,
+        "med_ret": 0.00132,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 311,
+        "signals": 17,
+        "coverage": 0.0547,
+        "hit": 0.5882,
+        "lo": 0.2342,
+        "hi": 0.8697,
+        "avg_ret": -0.00036,
+        "med_ret": 0.00203,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 121,
+        "signals": 4,
+        "coverage": 0.0331,
+        "hit": 0.75,
+        "lo": 0.1444,
+        "hi": 0.9816,
+        "avg_ret": 0.00795,
+        "med_ret": 0.01179,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 2,
+        "coverage": 0.0392,
+        "hit": 1.0,
+        "lo": 0.1441,
+        "hi": 1.0,
+        "avg_ret": 0.00982,
+        "med_ret": 0.00982,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2909,
+        "signals": 263,
+        "coverage": 0.0904,
+        "hit": 0.5019,
+        "lo": 0.3979,
+        "hi": 0.6058,
+        "avg_ret": 0.00019,
+        "med_ret": 2e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1247,
+        "signals": 91,
+        "coverage": 0.073,
+        "hit": 0.4835,
+        "lo": 0.3156,
+        "hi": 0.6552,
+        "avg_ret": 0.00014,
+        "med_ret": -7e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1454,
+        "signals": 124,
+        "coverage": 0.0853,
+        "hit": 0.5484,
+        "lo": 0.397,
+        "hi": 0.6914,
+        "avg_ret": 0.00047,
+        "med_ret": 0.00053,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 623,
+        "signals": 38,
+        "coverage": 0.061,
+        "hit": 0.5,
+        "lo": 0.256,
+        "hi": 0.744,
+        "avg_ret": 0.00018,
+        "med_ret": 7e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 727,
+        "signals": 53,
+        "coverage": 0.0729,
+        "hit": 0.4906,
+        "lo": 0.2784,
+        "hi": 0.7062,
+        "avg_ret": 0.00071,
+        "med_ret": -0.0006,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 311,
+        "signals": 20,
+        "coverage": 0.0643,
+        "hit": 0.45,
+        "lo": 0.1644,
+        "hi": 0.7729,
+        "avg_ret": -0.00047,
+        "med_ret": -0.001,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 121,
+        "signals": 9,
+        "coverage": 0.0744,
+        "hit": 0.4444,
+        "lo": 0.0999,
+        "hi": 0.8522,
+        "avg_ret": 0.00286,
+        "med_ret": -0.0039,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 4,
+        "coverage": 0.0784,
+        "hit": 0.25,
+        "lo": 0.0184,
+        "hi": 0.8556,
+        "avg_ret": -0.00847,
+        "med_ret": -0.00982,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2909,
+        "signals": 1370,
+        "coverage": 0.471,
+        "hit": 0.4803,
+        "lo": 0.4341,
+        "hi": 0.5268,
+        "avg_ret": 1e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1247,
+        "signals": 606,
+        "coverage": 0.486,
+        "hit": 0.4785,
+        "lo": 0.4097,
+        "hi": 0.5482,
+        "avg_ret": -2e-05,
+        "med_ret": -9e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1454,
+        "signals": 684,
+        "coverage": 0.4704,
+        "hit": 0.4956,
+        "lo": 0.4304,
+        "hi": 0.561,
+        "avg_ret": 2e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 623,
+        "signals": 303,
+        "coverage": 0.4864,
+        "hit": 0.5083,
+        "lo": 0.4108,
+        "hi": 0.605,
+        "avg_ret": 4e-05,
+        "med_ret": 7e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 727,
+        "signals": 332,
+        "coverage": 0.4567,
+        "hit": 0.4849,
+        "lo": 0.3926,
+        "hi": 0.5783,
+        "avg_ret": -9e-05,
+        "med_ret": -0.00016,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 311,
+        "signals": 150,
+        "coverage": 0.4823,
+        "hit": 0.5267,
+        "lo": 0.3895,
+        "hi": 0.66,
+        "avg_ret": 0.00014,
+        "med_ret": 0.00013,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 121,
+        "signals": 55,
+        "coverage": 0.4545,
+        "hit": 0.4727,
+        "lo": 0.2671,
+        "hi": 0.688,
+        "avg_ret": -0.00226,
+        "med_ret": -0.00122,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 26,
+        "coverage": 0.5098,
+        "hit": 0.5,
+        "lo": 0.22,
+        "hi": 0.78,
+        "avg_ret": -0.00295,
+        "med_ret": 8e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      }
+     ],
+     "walk_forward": {
+      "status": "walk_forward_validation_complete",
+      "stable_edge_horizons": [],
+      "blockers": [
+       "transaction_costs_not_included",
+       "execution_not_simulated",
+       "prospective_shadow_sample_not_accumulated",
+       "history_inspected_in_prior_development",
+       "source_calendar_and_series_construction_unverified"
+      ],
+      "folds": [
+       {
+        "horizon": 1,
+        "fold": 1,
+        "test_start": "2026-05-18",
+        "test_end": "2026-06-25",
+        "eligible": 622,
+        "signals": 364,
+        "coverage": 0.5852,
+        "hit": 0.5302,
+        "lo": 0.4405,
+        "hi": 0.618,
+        "avg_ret": 0.00027,
+        "med_ret": 0.00021,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 2,
+        "test_start": "2026-06-25",
+        "test_end": "2026-08-03",
+        "eligible": 622,
+        "signals": 293,
+        "coverage": 0.4711,
+        "hit": 0.4471,
+        "lo": 0.351,
+        "hi": 0.5473,
+        "avg_ret": -0.00029,
+        "med_ret": -0.00027,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 3,
+        "test_start": "2026-08-03",
+        "test_end": "2026-09-09",
+        "eligible": 622,
+        "signals": 371,
+        "coverage": 0.5965,
+        "hit": 0.5148,
+        "lo": 0.4263,
+        "hi": 0.6024,
+        "avg_ret": 0.00015,
+        "med_ret": 0.00016,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 4,
+        "test_start": "2026-09-09",
+        "test_end": "2026-10-16",
+        "eligible": 625,
+        "signals": 235,
+        "coverage": 0.376,
+        "hit": 0.4213,
+        "lo": 0.3167,
+        "hi": 0.5334,
+        "avg_ret": -0.0003,
+        "med_ret": -0.00035,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 1,
+        "test_start": "2026-05-18",
+        "test_end": "2026-06-25",
+        "eligible": 311,
+        "signals": 180,
+        "coverage": 0.5788,
+        "hit": 0.5,
+        "lo": 0.3756,
+        "hi": 0.6244,
+        "avg_ret": 0.00053,
+        "med_ret": 1e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 2,
+        "test_start": "2026-06-25",
+        "test_end": "2026-08-03",
+        "eligible": 311,
+        "signals": 144,
+        "coverage": 0.463,
+        "hit": 0.4722,
+        "lo": 0.3365,
+        "hi": 0.6122,
+        "avg_ret": -0.00052,
+        "med_ret": -0.00048,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 3,
+        "test_start": "2026-08-03",
+        "test_end": "2026-09-09",
+        "eligible": 311,
+        "signals": 183,
+        "coverage": 0.5884,
+        "hit": 0.5191,
+        "lo": 0.3946,
+        "hi": 0.6413,
+        "avg_ret": 0.00031,
+        "med_ret": 0.00029,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 4,
+        "test_start": "2026-09-09",
+        "test_end": "2026-10-16",
+        "eligible": 312,
+        "signals": 115,
+        "coverage": 0.3686,
+        "hit": 0.4783,
+        "lo": 0.3274,
+        "hi": 0.6331,
+        "avg_ret": -0.00046,
+        "med_ret": -0.00017,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 4,
+        "fold": 1,
+        "test_start": "2026-05-18",
+        "test_end": "2026-06-25",
+        "eligible": 155,
+        "signals": 90,
+        "coverage": 0.5806,
+        "hit": 0.5889,
+        "lo": 0.4102,
+        "hi": 0.7468,
+        "avg_ret": 0.00079,
+        "med_ret": 0.00095,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 2,
+        "test_start": "2026-06-25",
+        "test_end": "2026-08-03",
+        "eligible": 155,
+        "signals": 73,
+        "coverage": 0.471,
+        "hit": 0.3288,
+        "lo": 0.1754,
+        "hi": 0.5301,
+        "avg_ret": -0.00127,
+        "med_ret": -0.00177,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 3,
+        "test_start": "2026-08-03",
+        "test_end": "2026-09-09",
+        "eligible": 155,
+        "signals": 90,
+        "coverage": 0.5806,
+        "hit": 0.5444,
+        "lo": 0.3691,
+        "hi": 0.7094,
+        "avg_ret": 0.00069,
+        "med_ret": 0.00049,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 4,
+        "test_start": "2026-09-09",
+        "test_end": "2026-10-16",
+        "eligible": 156,
+        "signals": 59,
+        "coverage": 0.3782,
+        "hit": 0.4237,
+        "lo": 0.2338,
+        "hi": 0.6392,
+        "avg_ret": -0.00118,
+        "med_ret": -0.00101,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 1,
+        "test_start": "2026-05-18",
+        "test_end": "2026-06-24",
+        "eligible": 25,
+        "signals": 15,
+        "coverage": 0.6,
+        "hit": 0.5333,
+        "lo": 0.1866,
+        "hi": 0.8506,
+        "avg_ret": -0.00118,
+        "med_ret": 0.0027,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 2,
+        "test_start": "2026-06-25",
+        "test_end": "2026-07-31",
+        "eligible": 25,
+        "signals": 12,
+        "coverage": 0.48,
+        "hit": 0.0833,
+        "lo": 0.0061,
+        "hi": 0.5751,
+        "avg_ret": -0.0092,
+        "med_ret": -0.01065,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 3,
+        "test_start": "2026-08-03",
+        "test_end": "2026-09-08",
+        "eligible": 25,
+        "signals": 11,
+        "coverage": 0.44,
+        "hit": 0.5455,
+        "lo": 0.1623,
+        "hi": 0.8814,
+        "avg_ret": -0.00118,
+        "med_ret": 0.00207,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 4,
+        "test_start": "2026-09-09",
+        "test_end": "2026-10-15",
+        "eligible": 26,
+        "signals": 11,
+        "coverage": 0.4231,
+        "hit": 0.4545,
+        "lo": 0.1186,
+        "hi": 0.8377,
+        "avg_ret": -0.00385,
+        "med_ret": -0.00215,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      ]
+     }
+    }
+   },
+   "zones": {
+    "thirty_minute": [
+     {
+      "low": 4172.885,
+      "high": 4181.629,
+      "centre": 4177.257,
+      "evidence": [
+       "support_20",
+       "sma_200"
+      ],
+      "n": 2
+     },
+     {
+      "low": 4181.518,
+      "high": 4190.106,
+      "centre": 4186.156,
+      "evidence": [
+       "classic_s3",
+       "classic_s2",
+       "fib_s3",
+       "fib_s2",
+       "classic_s1",
+       "fib_s1"
+      ],
+      "n": 6
+     },
+     {
+      "low": 4186.652,
+      "high": 4195.082,
+      "centre": 4191.23,
+      "evidence": [
+       "pivot_previous_bar",
+       "fib_r1",
+       "ema_26",
+       "classic_r1",
+       "sma_20",
+       "fib_r2",
+       "sma_50",
+       "classic_r2",
+       "fib_r3"
+      ],
+      "n": 9
+     },
+     {
+      "low": 4192.318,
+      "high": 4197.148,
+      "centre": 4194.733,
+      "evidence": [
+       "classic_r3"
+      ],
+      "n": 1
+     },
+     {
+      "low": 4217.985,
+      "high": 4222.815,
+      "centre": 4220.4,
+      "evidence": [
+       "resistance_20"
+      ],
+      "n": 1
+     }
+    ],
+    "daily": [
+     {
+      "low": 4030.361,
+      "high": 4112.139,
+      "centre": 4078.675,
+      "evidence": [
+       "classic_s3",
+       "classic_s2",
+       "fib_s3",
+       "support_20"
+      ],
+      "n": 4
+     },
+     {
+      "low": 4094.499,
+      "high": 4154.501,
+      "centre": 4125.7,
+      "evidence": [
+       "fib_s2",
+       "classic_s1",
+       "fib_s1"
+      ],
+      "n": 3
+     },
+     {
+      "low": 4141.961,
+      "high": 4213.176,
+      "centre": 4177.569,
+      "evidence": [
+       "pivot_previous_bar",
+       "fib_r1"
+      ],
+      "n": 2
+     },
+     {
+      "low": 4183.961,
+      "high": 4263.835,
+      "centre": 4225.325,
+      "evidence": [
+       "classic_r1",
+       "fib_r2",
+       "sma_20",
+       "classic_r2",
+       "fib_r3",
+       "ema_26"
+      ],
+      "n": 6
+     },
+     {
+      "low": 4260.761,
+      "high": 4302.639,
+      "centre": 4281.7,
+      "evidence": [
+       "classic_r3"
+      ],
+      "n": 1
+     },
+     {
+      "low": 4353.587,
+      "high": 4395.465,
+      "centre": 4374.526,
+      "evidence": [
+       "sma_50"
+      ],
+      "n": 1
+     },
+     {
+      "low": 4418.861,
+      "high": 4460.739,
+      "centre": 4439.8,
+      "evidence": [
+       "resistance_20"
+      ],
+      "n": 1
+     },
+     {
+      "low": 4600.175,
+      "high": 4642.052,
+      "centre": 4621.113,
+      "evidence": [
+       "sma_200"
+      ],
+      "n": 1
+     }
+    ],
+    "hourly": [
+     {
+      "low": 4163.675,
+      "high": 4176.825,
+      "centre": 4170.3,
+      "evidence": [
+       "classic_s3",
+       "support_20",
+       "classic_s2",
+       "fib_s3"
+      ],
+      "n": 4
+     },
+     {
+      "low": 4171.925,
+      "high": 4185.6,
+      "centre": 4179.154,
+      "evidence": [
+       "sma_50",
+       "sma_200",
+       "fib_s2",
+       "classic_s1",
+       "fib_s1"
+      ],
+      "n": 5
+     },
+     {
+      "low": 4183.775,
+      "high": 4197.75,
+      "centre": 4190.584,
+      "evidence": [
+       "pivot_previous_bar",
+       "ema_26",
+       "fib_r1",
+       "sma_20"
+      ],
+      "n": 4
+     },
+     {
+      "low": 4192.075,
+      "high": 4205.225,
+      "centre": 4198.769,
+      "evidence": [
+       "classic_r1",
+       "fib_r2",
+       "classic_r2",
+       "fib_r3"
+      ],
+      "n": 4
+     },
+     {
+      "low": 4206.275,
+      "high": 4213.525,
+      "centre": 4209.9,
+      "evidence": [
+       "classic_r3"
+      ],
+      "n": 1
+     },
+     {
+      "low": 4216.775,
+      "high": 4224.025,
+      "centre": 4220.4,
+      "evidence": [
+       "resistance_20"
+      ],
+      "n": 1
+     }
+    ]
+   },
+   "scenarios": {
+    "thirty_minute": [
+     {
+      "scenario": "range_support_reversion_condition",
+      "regime": "range_or_low_trend_strength",
+      "trigger": {
+       "condition": "close_near_support_within_one_atr",
+       "level": 4175.3
+      },
+      "invalidation": {
+       "condition": "close_below_support_by_one_atr",
+       "level": 4165.640088507771
+      },
+      "zone": {
+       "support": 4175.3,
+       "resistance": 4220.4
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     },
+     {
+      "scenario": "range_resistance_reversion_condition",
+      "regime": "range_or_low_trend_strength",
+      "trigger": {
+       "condition": "close_near_resistance_within_one_atr",
+       "level": 4220.4
+      },
+      "invalidation": {
+       "condition": "close_above_resistance_by_one_atr",
+       "level": 4230.059911492229
+      },
+      "zone": {
+       "support": 4175.3,
+       "resistance": 4220.4
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     }
+    ],
+    "daily": [
+     {
+      "scenario": "transition_upward_breakout_condition",
+      "regime": "trend_down_weak",
+      "trigger": {
+       "condition": "close_above_resistance",
+       "level": 4439.8
+      },
+      "invalidation": {
+       "condition": "close_back_inside_range",
+       "level": 4439.8
+      },
+      "zone": {
+       "support": 4091.2,
+       "resistance": 4439.8
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     },
+     {
+      "scenario": "transition_downward_breakout_condition",
+      "regime": "trend_down_weak",
+      "trigger": {
+       "condition": "close_below_support",
+       "level": 4091.2
+      },
+      "invalidation": {
+       "condition": "close_back_inside_range",
+       "level": 4091.2
+      },
+      "zone": {
+       "support": 4091.2,
+       "resistance": 4439.8
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     }
+    ],
+    "hourly": [
+     {
+      "scenario": "range_support_reversion_condition",
+      "regime": "range_or_low_trend_strength",
+      "trigger": {
+       "condition": "close_near_support_within_one_atr",
+       "level": 4167.5
+      },
+      "invalidation": {
+       "condition": "close_below_support_by_one_atr",
+       "level": 4153.0011863962245
+      },
+      "zone": {
+       "support": 4167.5,
+       "resistance": 4220.4
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     },
+     {
+      "scenario": "range_resistance_reversion_condition",
+      "regime": "range_or_low_trend_strength",
+      "trigger": {
+       "condition": "close_near_resistance_within_one_atr",
+       "level": 4220.4
+      },
+      "invalidation": {
+       "condition": "close_above_resistance_by_one_atr",
+       "level": 4234.898813603775
+      },
+      "zone": {
+       "support": 4167.5,
+       "resistance": 4220.4
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     }
+    ]
+   },
+   "time_profiles": {
+    "thirty_minute": {
+     "by_hour": [
+      {
+       "h": 0,
+       "n": 210,
+       "mean": 0.000154,
+       "med": -2.4e-05
+      },
+      {
+       "h": 1,
+       "n": 212,
+       "mean": -0.000134,
+       "med": -0.000168
+      },
+      {
+       "h": 2,
+       "n": 212,
+       "mean": -0.000119,
+       "med": -2.4e-05
+      },
+      {
+       "h": 3,
+       "n": 212,
+       "mean": -3.6e-05,
+       "med": -7.2e-05
+      },
+      {
+       "h": 4,
+       "n": 212,
+       "mean": -9.5e-05,
+       "med": -0.000116
+      },
+      {
+       "h": 5,
+       "n": 212,
+       "mean": 3.1e-05,
+       "med": -3.4e-05
+      },
+      {
+       "h": 6,
+       "n": 212,
+       "mean": 0.00034,
+       "med": 0.000238
+      },
+      {
+       "h": 7,
+       "n": 212,
+       "mean": -6.9e-05,
+       "med": -0.000184
+      },
+      {
+       "h": 8,
+       "n": 210,
+       "mean": -0.000203,
+       "med": -0.000117
+      },
+      {
+       "h": 9,
+       "n": 210,
+       "mean": -3.6e-05,
+       "med": 1.1e-05
+      },
+      {
+       "h": 10,
+       "n": 210,
+       "mean": 0.000116,
+       "med": 0.000159
+      },
+      {
+       "h": 11,
+       "n": 210,
+       "mean": 0.000237,
+       "med": 0.000184
+      },
+      {
+       "h": 12,
+       "n": 210,
+       "mean": -0.00012,
+       "med": -0.000171
+      },
+      {
+       "h": 13,
+       "n": 210,
+       "mean": -2.1e-05,
+       "med": -0.000387
+      },
+      {
+       "h": 14,
+       "n": 210,
+       "mean": -2e-05,
+       "med": -0.0
+      },
+      {
+       "h": 15,
+       "n": 211,
+       "mean": -3.3e-05,
+       "med": 0.000113
+      },
+      {
+       "h": 16,
+       "n": 212,
+       "mean": -0.000163,
+       "med": -0.000214
+      },
+      {
+       "h": 17,
+       "n": 208,
+       "mean": -2.4e-05,
+       "med": -0.000189
+      },
+      {
+       "h": 18,
+       "n": 208,
+       "mean": -0.000165,
+       "med": 0.0
+      },
+      {
+       "h": 19,
+       "n": 206,
+       "mean": -0.00016,
+       "med": -0.000133
+      },
+      {
+       "h": 20,
+       "n": 206,
+       "mean": -6.9e-05,
+       "med": -0.000145
+      },
+      {
+       "h": 22,
+       "n": 209,
+       "mean": -3.8e-05,
+       "med": -0.000112
+      },
+      {
+       "h": 23,
+       "n": 210,
+       "mean": 3.7e-05,
+       "med": 0.0
+      }
+     ],
+     "by_weekday": [
+      {
+       "weekday_utc": 0,
+       "sample": 941,
+       "mean_return": -7.694940542347189e-05,
+       "median_return": -4.596750097674018e-05
+      },
+      {
+       "weekday_utc": 1,
+       "sample": 966,
+       "mean_return": -0.00011268119516141845,
+       "median_return": -0.00011600907982128872
+      },
+      {
+       "weekday_utc": 2,
+       "sample": 965,
+       "mean_return": -2.3823781040852333e-05,
+       "median_return": -6.622370367104224e-05
+      },
+      {
+       "weekday_utc": 3,
+       "sample": 972,
+       "mean_return": 5.8731771488131745e-05,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 4,
+       "sample": 906,
+       "mean_return": 2.6507940694811715e-05,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 6,
+       "sample": 84,
+       "mean_return": 2.3848288107284976e-06,
+       "median_return": 6.799329132867182e-05
+      }
+     ]
+    },
+    "daily": {
+     "by_hour": [
+      {
+       "h": 22,
+       "n": 179,
+       "mean": -0.000636,
+       "med": -0.00083
+      },
+      {
+       "h": 23,
+       "n": 85,
+       "mean": 0.001014,
+       "med": 0.002586
+      }
+     ],
+     "by_weekday": [
+      {
+       "weekday_utc": 0,
+       "sample": 51,
+       "mean_return": -0.0020258479701178293,
+       "median_return": -0.001304279385639262
+      },
+      {
+       "weekday_utc": 1,
+       "sample": 55,
+       "mean_return": 0.0029319498617774134,
+       "median_return": 0.0046054972890368084
+      },
+      {
+       "weekday_utc": 2,
+       "sample": 53,
+       "mean_return": -0.0009741141148516845,
+       "median_return": 0.0010663655752101153
+      },
+      {
+       "weekday_utc": 3,
+       "sample": 53,
+       "mean_return": -0.0004141401316077875,
+       "median_return": 0.0031203598097655494
+      },
+      {
+       "weekday_utc": 6,
+       "sample": 52,
+       "mean_return": -0.00023186541912265956,
+       "median_return": 0.0002679925690834417
+      }
+     ]
+    },
+    "hourly": {
+     "by_hour": [
+      {
+       "h": 0,
+       "n": 177,
+       "mean": 1.6e-05,
+       "med": 0.0
+      },
+      {
+       "h": 1,
+       "n": 180,
+       "mean": 0.000157,
+       "med": -7.2e-05
+      },
+      {
+       "h": 2,
+       "n": 181,
+       "mean": -0.000436,
+       "med": -0.000145
+      },
+      {
+       "h": 3,
+       "n": 182,
+       "mean": -2.9e-05,
+       "med": 0.0
+      },
+      {
+       "h": 4,
+       "n": 182,
+       "mean": -0.000108,
+       "med": 0.0
+      },
+      {
+       "h": 5,
+       "n": 182,
+       "mean": -0.000264,
+       "med": 0.0
+      },
+      {
+       "h": 6,
+       "n": 182,
+       "mean": 0.000241,
+       "med": 0.000192
+      },
+      {
+       "h": 7,
+       "n": 182,
+       "mean": -0.000187,
+       "med": -0.000139
+      },
+      {
+       "h": 8,
+       "n": 182,
+       "mean": -0.000323,
+       "med": -0.000263
+      },
+      {
+       "h": 9,
+       "n": 182,
+       "mean": -0.000234,
+       "med": -4.7e-05
+      },
+      {
+       "h": 10,
+       "n": 182,
+       "mean": -5e-06,
+       "med": 0.0
+      },
+      {
+       "h": 11,
+       "n": 182,
+       "mean": 0.000245,
+       "med": 0.0
+      },
+      {
+       "h": 12,
+       "n": 182,
+       "mean": -7.9e-05,
+       "med": -0.000536
+      },
+      {
+       "h": 13,
+       "n": 182,
+       "mean": 9.4e-05,
+       "med": 0.0
+      },
+      {
+       "h": 14,
+       "n": 183,
+       "mean": -8.8e-05,
+       "med": 0.000109
+      },
+      {
+       "h": 15,
+       "n": 183,
+       "mean": -0.000183,
+       "med": 0.000191
+      },
+      {
+       "h": 16,
+       "n": 183,
+       "mean": -0.000134,
+       "med": -9e-05
+      },
+      {
+       "h": 17,
+       "n": 181,
+       "mean": 3.6e-05,
+       "med": -0.00021
+      },
+      {
+       "h": 18,
+       "n": 181,
+       "mean": -0.000129,
+       "med": -0.000118
+      },
+      {
+       "h": 19,
+       "n": 179,
+       "mean": -0.000215,
+       "med": 0.0
+      },
+      {
+       "h": 20,
+       "n": 178,
+       "mean": -0.000219,
+       "med": -4.7e-05
+      },
+      {
+       "h": 21,
+       "n": 23,
+       "mean": -9.4e-05,
+       "med": 0.0
+      },
+      {
+       "h": 22,
+       "n": 151,
+       "mean": 0.000237,
+       "med": -4.6e-05
+      },
+      {
+       "h": 23,
+       "n": 176,
+       "mean": 5.1e-05,
+       "med": 0.0
+      }
+     ],
+     "by_weekday": [
+      {
+       "weekday_utc": 0,
+       "sample": 819,
+       "mean_return": -1.395529088112644e-07,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 1,
+       "sample": 831,
+       "mean_return": -0.00022491339291717626,
+       "median_return": -9.350688210651992e-05
+      },
+      {
+       "weekday_utc": 2,
+       "sample": 847,
+       "mean_return": -4.5598123693204604e-05,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 3,
+       "sample": 844,
+       "mean_return": -0.00013567428982531532,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 4,
+       "sample": 749,
+       "mean_return": 7.334429537208464e-05,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 6,
+       "sample": 68,
+       "mean_return": -9.92035931904546e-05,
+       "median_return": 0.0
+      }
+     ]
+    }
+   },
+   "action": {
+    "action": "NO_LIVE_SIGNAL",
+    "probability": null,
+    "reason": "source_quality_and_calibration_not_approved"
+   }
+  },
+  "SI": {
+   "timeframes": {
+    "thirty_minute": {
+     "tf_ar": "30 دقيقة",
+     "state": "trend_down_strong",
+     "state_ar": "اتجاه هابط قوي",
+     "volatility": "normal_relative_to_sample",
+     "volatility_ar": "تقلّب طبيعي مقارنةً بالعيّنة",
+     "data_cutoff_utc": "2026-10-16T20:30:00+00:00",
+     "quality": "accept_with_limits",
+     "observations": {
+      "close": 57.135,
+      "ema_12": 57.3118,
+      "ema_26": 57.4743,
+      "sma_50": 57.6349,
+      "sma_200": 58.3405,
+      "rsi_14": 37.9167,
+      "adx_14": 27.9803,
+      "plus_di_14": 13.0658,
+      "minus_di_14": 22.5109,
+      "atr_14": 0.221,
+      "support_20": 57.035,
+      "resistance_20": 58.14,
+      "zscore_20": -1.1633
+     },
+     "live_blocking": [
+      "exchange_calendar_not_loaded",
+      "gaps_not_classified_against_exchange_calendar",
+      "last_closed_bar_is_stale",
+      "price_series_construction_unverified"
+     ]
+    },
+    "daily": {
+     "tf_ar": "يومي",
+     "state": "NO_ANALYSIS",
+     "state_ar": "لا تحليل (البيانات في الحجر)",
+     "volatility": null,
+     "volatility_ar": null,
+     "data_cutoff_utc": null,
+     "quality": "quarantine",
+     "observations": {},
+     "live_blocking": [
+      "insufficient_reliable_analysis_bars"
+     ]
+    },
+    "hourly": {
+     "tf_ar": "ساعة",
+     "state": "unclear_transition",
+     "state_ar": "مرحلة انتقالية غير واضحة",
+     "volatility": "normal_relative_to_sample",
+     "volatility_ar": "تقلّب طبيعي مقارنةً بالعيّنة",
+     "data_cutoff_utc": "2026-10-16T20:00:00+00:00",
+     "quality": "accept_with_limits",
+     "observations": {
+      "close": 57.135,
+      "ema_12": 57.4428,
+      "ema_26": 57.4822,
+      "sma_50": 57.0557,
+      "sma_200": 59.4588,
+      "rsi_14": 39.9708,
+      "adx_14": 20.3569,
+      "plus_di_14": 13.5582,
+      "minus_di_14": 23.5031,
+      "atr_14": 0.3157,
+      "support_20": 57.035,
+      "resistance_20": 58.14,
+      "zscore_20": -1.6391
+     },
+     "live_blocking": [
+      "exchange_calendar_not_loaded",
+      "gaps_not_classified_against_exchange_calendar",
+      "last_closed_bar_is_stale",
+      "price_series_construction_unverified"
+     ]
+    }
+   },
+   "consensus": {
+    "dirs": {
+     "daily": {
+      "v": "unavailable",
+      "ar": "غير متاح"
+     },
+     "hourly": {
+      "v": "neutral",
+      "ar": "محايد"
+     },
+     "thirty_minute": {
+      "v": "down",
+      "ar": "هابط"
+     }
+    },
+    "value": "partial_down_alignment",
+    "ar": "توافق هبوطي جزئي"
+   },
+   "rules": {
+    "thirty_minute": {
+     "survivors": [],
+     "rules": [
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3369,
+        "signals": 2758,
+        "coverage": 0.8186,
+        "hit": 0.4347,
+        "lo": 0.4026,
+        "hi": 0.4675,
+        "avg_ret": 1e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1444,
+        "signals": 1156,
+        "coverage": 0.8006,
+        "hit": 0.5017,
+        "lo": 0.4513,
+        "hi": 0.5521,
+        "avg_ret": -3e-05,
+        "med_ret": 7e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1684,
+        "signals": 1373,
+        "coverage": 0.8153,
+        "hit": 0.4545,
+        "lo": 0.4088,
+        "hi": 0.501,
+        "avg_ret": 1e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 722,
+        "signals": 580,
+        "coverage": 0.8033,
+        "hit": 0.5052,
+        "lo": 0.4342,
+        "hi": 0.5759,
+        "avg_ret": -0.00011,
+        "med_ret": 0.00015,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 842,
+        "signals": 682,
+        "coverage": 0.81,
+        "hit": 0.4707,
+        "lo": 0.4059,
+        "hi": 0.5365,
+        "avg_ret": 6e-05,
+        "med_ret": -0.00023,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 361,
+        "signals": 287,
+        "coverage": 0.795,
+        "hit": 0.4774,
+        "lo": 0.3787,
+        "hi": 0.5778,
+        "avg_ret": -0.00012,
+        "med_ret": -0.00032,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 421,
+        "signals": 343,
+        "coverage": 0.8147,
+        "hit": 0.4898,
+        "lo": 0.3987,
+        "hi": 0.5816,
+        "avg_ret": -0.00029,
+        "med_ret": -0.0005,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 180,
+        "signals": 141,
+        "coverage": 0.7833,
+        "hit": 0.461,
+        "lo": 0.325,
+        "hi": 0.603,
+        "avg_ret": -0.00019,
+        "med_ret": -0.00066,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 210,
+        "signals": 170,
+        "coverage": 0.8095,
+        "hit": 0.5,
+        "lo": 0.3722,
+        "hi": 0.6278,
+        "avg_ret": 0.00058,
+        "med_ret": -8e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 71,
+        "coverage": 0.7889,
+        "hit": 0.4366,
+        "lo": 0.2577,
+        "hi": 0.6337,
+        "avg_ret": -5e-05,
+        "med_ret": -0.00075,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3369,
+        "signals": 257,
+        "coverage": 0.0763,
+        "hit": 0.4747,
+        "lo": 0.3709,
+        "hi": 0.5808,
+        "avg_ret": 0.00011,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1444,
+        "signals": 113,
+        "coverage": 0.0783,
+        "hit": 0.4779,
+        "lo": 0.3259,
+        "hi": 0.634,
+        "avg_ret": -0.00035,
+        "med_ret": -0.00015,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1684,
+        "signals": 126,
+        "coverage": 0.0748,
+        "hit": 0.4762,
+        "lo": 0.3316,
+        "hi": 0.6248,
+        "avg_ret": -0.00047,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 722,
+        "signals": 63,
+        "coverage": 0.0873,
+        "hit": 0.4762,
+        "lo": 0.281,
+        "hi": 0.6789,
+        "avg_ret": -0.00075,
+        "med_ret": -0.0003,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 842,
+        "signals": 72,
+        "coverage": 0.0855,
+        "hit": 0.5694,
+        "lo": 0.373,
+        "hi": 0.7462,
+        "avg_ret": -0.00018,
+        "med_ret": 0.00105,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 361,
+        "signals": 31,
+        "coverage": 0.0859,
+        "hit": 0.4194,
+        "lo": 0.181,
+        "hi": 0.7024,
+        "avg_ret": -0.00173,
+        "med_ret": -0.00187,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 421,
+        "signals": 39,
+        "coverage": 0.0926,
+        "hit": 0.5385,
+        "lo": 0.2884,
+        "hi": 0.7705,
+        "avg_ret": 0.00103,
+        "med_ret": 0.00404,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 180,
+        "signals": 13,
+        "coverage": 0.0722,
+        "hit": 0.6154,
+        "lo": 0.2197,
+        "hi": 0.9009,
+        "avg_ret": 0.00076,
+        "med_ret": 0.00219,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 210,
+        "signals": 22,
+        "coverage": 0.1048,
+        "hit": 0.5455,
+        "lo": 0.2343,
+        "hi": 0.8248,
+        "avg_ret": -0.00016,
+        "med_ret": 0.0006,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 5,
+        "coverage": 0.0556,
+        "hit": 0.8,
+        "lo": 0.1924,
+        "hi": 0.9853,
+        "avg_ret": 0.00229,
+        "med_ret": 0.00069,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3369,
+        "signals": 320,
+        "coverage": 0.095,
+        "hit": 0.4062,
+        "lo": 0.3166,
+        "hi": 0.5026,
+        "avg_ret": -0.00012,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1444,
+        "signals": 118,
+        "coverage": 0.0817,
+        "hit": 0.4746,
+        "lo": 0.3259,
+        "hi": 0.6279,
+        "avg_ret": -0.00012,
+        "med_ret": -0.00016,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1684,
+        "signals": 170,
+        "coverage": 0.101,
+        "hit": 0.4529,
+        "lo": 0.3288,
+        "hi": 0.5833,
+        "avg_ret": -0.00079,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 722,
+        "signals": 56,
+        "coverage": 0.0776,
+        "hit": 0.5357,
+        "lo": 0.3208,
+        "hi": 0.7382,
+        "avg_ret": 0.00012,
+        "med_ret": 0.00017,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 842,
+        "signals": 83,
+        "coverage": 0.0986,
+        "hit": 0.3855,
+        "lo": 0.2271,
+        "hi": 0.5727,
+        "avg_ret": -0.00189,
+        "med_ret": -0.00203,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 361,
+        "signals": 33,
+        "coverage": 0.0914,
+        "hit": 0.5758,
+        "lo": 0.3007,
+        "hi": 0.8108,
+        "avg_ret": 0.00252,
+        "med_ret": 0.00086,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 421,
+        "signals": 45,
+        "coverage": 0.1069,
+        "hit": 0.3778,
+        "lo": 0.1803,
+        "hi": 0.6263,
+        "avg_ret": -0.00255,
+        "med_ret": -0.00358,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 180,
+        "signals": 14,
+        "coverage": 0.0778,
+        "hit": 0.5,
+        "lo": 0.1613,
+        "hi": 0.8387,
+        "avg_ret": 0.0041,
+        "med_ret": 0.00023,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 210,
+        "signals": 27,
+        "coverage": 0.1286,
+        "hit": 0.4444,
+        "lo": 0.1862,
+        "hi": 0.7366,
+        "avg_ret": 0.00121,
+        "med_ret": -0.00095,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 6,
+        "coverage": 0.0667,
+        "hit": 0.3333,
+        "lo": 0.0442,
+        "hi": 0.8439,
+        "avg_ret": 0.00045,
+        "med_ret": -0.00059,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 3369,
+        "signals": 1657,
+        "coverage": 0.4918,
+        "hit": 0.4218,
+        "lo": 0.3807,
+        "hi": 0.4641,
+        "avg_ret": -6e-05,
+        "med_ret": 0.0,
+        "edge": "negative_statistical_screen_only",
+        "edge_ar": "negative_statistical_screen_only"
+       },
+       "holdout": {
+        "eligible": 1444,
+        "signals": 708,
+        "coverage": 0.4903,
+        "hit": 0.5099,
+        "lo": 0.4455,
+        "hi": 0.5739,
+        "avg_ret": -0.0,
+        "med_ret": 8e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1684,
+        "signals": 843,
+        "coverage": 0.5006,
+        "hit": 0.4543,
+        "lo": 0.3963,
+        "hi": 0.5137,
+        "avg_ret": -9e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 722,
+        "signals": 357,
+        "coverage": 0.4945,
+        "hit": 0.521,
+        "lo": 0.4307,
+        "hi": 0.61,
+        "avg_ret": 7e-05,
+        "med_ret": 0.00023,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 842,
+        "signals": 421,
+        "coverage": 0.5,
+        "hit": 0.4727,
+        "lo": 0.3907,
+        "hi": 0.5561,
+        "avg_ret": -0.00023,
+        "med_ret": -0.00015,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 361,
+        "signals": 185,
+        "coverage": 0.5125,
+        "hit": 0.4973,
+        "lo": 0.3747,
+        "hi": 0.6203,
+        "avg_ret": 0.00057,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 8,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 421,
+        "signals": 213,
+        "coverage": 0.5059,
+        "hit": 0.4977,
+        "lo": 0.3829,
+        "hi": 0.6127,
+        "avg_ret": -0.00039,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 180,
+        "signals": 91,
+        "coverage": 0.5056,
+        "hit": 0.5055,
+        "lo": 0.335,
+        "hi": 0.6747,
+        "avg_ret": 0.00107,
+        "med_ret": 9e-05,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 16,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 210,
+        "signals": 110,
+        "coverage": 0.5238,
+        "hit": 0.5091,
+        "lo": 0.3521,
+        "hi": 0.6643,
+        "avg_ret": 0.00126,
+        "med_ret": 0.0005,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 90,
+        "signals": 46,
+        "coverage": 0.5111,
+        "hit": 0.413,
+        "lo": 0.2071,
+        "hi": 0.6547,
+        "avg_ret": 0.00131,
+        "med_ret": -0.00068,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      }
+     ],
+     "walk_forward": {
+      "status": "walk_forward_validation_complete",
+      "stable_edge_horizons": [],
+      "blockers": [
+       "transaction_costs_not_included",
+       "execution_not_simulated",
+       "prospective_shadow_sample_not_accumulated",
+       "history_inspected_in_prior_development",
+       "source_calendar_and_series_construction_unverified"
+      ],
+      "folds": [
+       {
+        "horizon": 1,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 721,
+        "signals": 333,
+        "coverage": 0.4619,
+        "hit": 0.4625,
+        "lo": 0.3712,
+        "hi": 0.5563,
+        "avg_ret": -9e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-03",
+        "eligible": 721,
+        "signals": 363,
+        "coverage": 0.5035,
+        "hit": 0.4545,
+        "lo": 0.3673,
+        "hi": 0.5446,
+        "avg_ret": -6e-05,
+        "med_ret": -0.00022,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 3,
+        "test_start": "2026-09-03",
+        "test_end": "2026-09-25",
+        "eligible": 721,
+        "signals": 323,
+        "coverage": 0.448,
+        "hit": 0.4954,
+        "lo": 0.4014,
+        "hi": 0.5897,
+        "avg_ret": -0.00013,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 722,
+        "signals": 385,
+        "coverage": 0.5332,
+        "hit": 0.5221,
+        "lo": 0.435,
+        "hi": 0.6078,
+        "avg_ret": 0.0001,
+        "med_ret": 0.00016,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 360,
+        "signals": 168,
+        "coverage": 0.4667,
+        "hit": 0.4643,
+        "lo": 0.3385,
+        "hi": 0.5948,
+        "avg_ret": -0.00015,
+        "med_ret": -0.00033,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-03",
+        "eligible": 360,
+        "signals": 186,
+        "coverage": 0.5167,
+        "hit": 0.4946,
+        "lo": 0.3725,
+        "hi": 0.6174,
+        "avg_ret": -3e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 3,
+        "test_start": "2026-09-03",
+        "test_end": "2026-09-25",
+        "eligible": 360,
+        "signals": 166,
+        "coverage": 0.4611,
+        "hit": 0.5181,
+        "lo": 0.3877,
+        "hi": 0.646,
+        "avg_ret": -0.00011,
+        "med_ret": 0.00023,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 361,
+        "signals": 191,
+        "coverage": 0.5291,
+        "hit": 0.5236,
+        "lo": 0.4013,
+        "hi": 0.643,
+        "avg_ret": 0.00022,
+        "med_ret": 0.00025,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 4,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 180,
+        "signals": 82,
+        "coverage": 0.4556,
+        "hit": 0.4756,
+        "lo": 0.301,
+        "hi": 0.6564,
+        "avg_ret": 8e-05,
+        "med_ret": -0.00038,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 180,
+        "signals": 96,
+        "coverage": 0.5333,
+        "hit": 0.4583,
+        "lo": 0.2975,
+        "hi": 0.6283,
+        "avg_ret": -0.00019,
+        "med_ret": -0.00031,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 3,
+        "test_start": "2026-09-03",
+        "test_end": "2026-09-25",
+        "eligible": 180,
+        "signals": 86,
+        "coverage": 0.4778,
+        "hit": 0.5465,
+        "lo": 0.3674,
+        "hi": 0.7144,
+        "avg_ret": 0.0005,
+        "med_ret": 0.00102,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 180,
+        "signals": 91,
+        "coverage": 0.5056,
+        "hit": 0.5165,
+        "lo": 0.3448,
+        "hi": 0.6844,
+        "avg_ret": 0.0007,
+        "med_ret": 0.00025,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 90,
+        "signals": 40,
+        "coverage": 0.4444,
+        "hit": 0.425,
+        "lo": 0.205,
+        "hi": 0.6793,
+        "avg_ret": -0.00052,
+        "med_ret": -0.00131,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 90,
+        "signals": 48,
+        "coverage": 0.5333,
+        "hit": 0.5417,
+        "lo": 0.3113,
+        "hi": 0.7555,
+        "avg_ret": -0.00063,
+        "med_ret": 0.00036,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 3,
+        "test_start": "2026-09-03",
+        "test_end": "2026-09-25",
+        "eligible": 90,
+        "signals": 42,
+        "coverage": 0.4667,
+        "hit": 0.4524,
+        "lo": 0.2289,
+        "hi": 0.6968,
+        "avg_ret": 0.0003,
+        "med_ret": -0.0014,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 8,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 90,
+        "signals": 46,
+        "coverage": 0.5111,
+        "hit": 0.5,
+        "lo": 0.2735,
+        "hi": 0.7265,
+        "avg_ret": 0.00081,
+        "med_ret": -0.00022,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 1,
+        "test_start": "2026-07-21",
+        "test_end": "2026-08-12",
+        "eligible": 45,
+        "signals": 20,
+        "coverage": 0.4444,
+        "hit": 0.4,
+        "lo": 0.1359,
+        "hi": 0.7386,
+        "avg_ret": -0.0018,
+        "med_ret": -0.00169,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 2,
+        "test_start": "2026-08-12",
+        "test_end": "2026-09-02",
+        "eligible": 45,
+        "signals": 24,
+        "coverage": 0.5333,
+        "hit": 0.5417,
+        "lo": 0.2409,
+        "hi": 0.8149,
+        "avg_ret": -0.00237,
+        "med_ret": 0.00192,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 3,
+        "test_start": "2026-09-03",
+        "test_end": "2026-09-24",
+        "eligible": 45,
+        "signals": 21,
+        "coverage": 0.4667,
+        "hit": 0.4286,
+        "lo": 0.1558,
+        "hi": 0.7529,
+        "avg_ret": 0.00129,
+        "med_ret": -0.00068,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 16,
+        "fold": 4,
+        "test_start": "2026-09-25",
+        "test_end": "2026-10-16",
+        "eligible": 45,
+        "signals": 24,
+        "coverage": 0.5333,
+        "hit": 0.3333,
+        "lo": 0.1117,
+        "hi": 0.6653,
+        "avg_ret": 3e-05,
+        "med_ret": -0.00238,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      ]
+     }
+    },
+    "hourly": {
+     "survivors": [],
+     "rules": [
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2859,
+        "signals": 2312,
+        "coverage": 0.8087,
+        "hit": 0.3867,
+        "lo": 0.3524,
+        "hi": 0.4221,
+        "avg_ret": -9e-05,
+        "med_ret": 0.0,
+        "edge": "negative_statistical_screen_only",
+        "edge_ar": "negative_statistical_screen_only"
+       },
+       "holdout": {
+        "eligible": 1226,
+        "signals": 1000,
+        "coverage": 0.8157,
+        "hit": 0.476,
+        "lo": 0.4222,
+        "hi": 0.5304,
+        "avg_ret": -0.00018,
+        "med_ret": -0.00015,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1429,
+        "signals": 1149,
+        "coverage": 0.8041,
+        "hit": 0.4421,
+        "lo": 0.3925,
+        "hi": 0.493,
+        "avg_ret": -0.00014,
+        "med_ret": 0.0,
+        "edge": "negative_statistical_screen_only",
+        "edge_ar": "negative_statistical_screen_only"
+       },
+       "holdout": {
+        "eligible": 613,
+        "signals": 502,
+        "coverage": 0.8189,
+        "hit": 0.4661,
+        "lo": 0.3911,
+        "hi": 0.5428,
+        "avg_ret": -0.00026,
+        "med_ret": -0.00058,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 714,
+        "signals": 566,
+        "coverage": 0.7927,
+        "hit": 0.4717,
+        "lo": 0.4007,
+        "hi": 0.5439,
+        "avg_ret": -0.00028,
+        "med_ret": -0.00068,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 306,
+        "signals": 255,
+        "coverage": 0.8333,
+        "hit": 0.4314,
+        "lo": 0.3299,
+        "hi": 0.539,
+        "avg_ret": -0.00054,
+        "med_ret": -0.00107,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "trend_following_baseline",
+       "rule_ar": "تتبّع الاتجاه",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 119,
+        "signals": 96,
+        "coverage": 0.8067,
+        "hit": 0.5,
+        "lo": 0.3341,
+        "hi": 0.6659,
+        "avg_ret": 0.00455,
+        "med_ret": 0.00112,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 39,
+        "coverage": 0.7647,
+        "hit": 0.4615,
+        "lo": 0.2295,
+        "hi": 0.7116,
+        "avg_ret": -0.00264,
+        "med_ret": -0.00206,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2859,
+        "signals": 222,
+        "coverage": 0.0776,
+        "hit": 0.5315,
+        "lo": 0.4175,
+        "hi": 0.6424,
+        "avg_ret": 0.00144,
+        "med_ret": 0.00045,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 1226,
+        "signals": 88,
+        "coverage": 0.0718,
+        "hit": 0.4432,
+        "lo": 0.2785,
+        "hi": 0.6214,
+        "avg_ret": -0.00105,
+        "med_ret": -0.00115,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1429,
+        "signals": 111,
+        "coverage": 0.0777,
+        "hit": 0.5135,
+        "lo": 0.3568,
+        "hi": 0.6676,
+        "avg_ret": 0.00167,
+        "med_ret": 0.00016,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 613,
+        "signals": 38,
+        "coverage": 0.062,
+        "hit": 0.3947,
+        "lo": 0.18,
+        "hi": 0.6596,
+        "avg_ret": -0.00238,
+        "med_ret": -0.00068,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 714,
+        "signals": 55,
+        "coverage": 0.077,
+        "hit": 0.4909,
+        "lo": 0.2818,
+        "hi": 0.7032,
+        "avg_ret": 0.00024,
+        "med_ret": 0.0,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 306,
+        "signals": 15,
+        "coverage": 0.049,
+        "hit": 0.4,
+        "lo": 0.1155,
+        "hi": 0.7728,
+        "avg_ret": -0.00392,
+        "med_ret": -0.00037,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "mean_reversion_baseline",
+       "rule_ar": "العودة للمتوسط",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 119,
+        "signals": 7,
+        "coverage": 0.0588,
+        "hit": 0.4286,
+        "lo": 0.0784,
+        "hi": 0.8686,
+        "avg_ret": -0.02274,
+        "med_ret": -0.00917,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 4,
+        "coverage": 0.0784,
+        "hit": 0.75,
+        "lo": 0.1444,
+        "hi": 0.9816,
+        "avg_ret": 0.00095,
+        "med_ret": 0.0141,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2859,
+        "signals": 287,
+        "coverage": 0.1004,
+        "hit": 0.3798,
+        "lo": 0.2877,
+        "hi": 0.4814,
+        "avg_ret": -0.00127,
+        "med_ret": -6e-05,
+        "edge": "negative_statistical_screen_only",
+        "edge_ar": "negative_statistical_screen_only"
+       },
+       "holdout": {
+        "eligible": 1226,
+        "signals": 102,
+        "coverage": 0.0832,
+        "hit": 0.5,
+        "lo": 0.3385,
+        "hi": 0.6615,
+        "avg_ret": 0.00026,
+        "med_ret": 4e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1429,
+        "signals": 145,
+        "coverage": 0.1015,
+        "hit": 0.3931,
+        "lo": 0.2666,
+        "hi": 0.5358,
+        "avg_ret": -0.00139,
+        "med_ret": -0.00119,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 613,
+        "signals": 52,
+        "coverage": 0.0848,
+        "hit": 0.5962,
+        "lo": 0.3659,
+        "hi": 0.7906,
+        "avg_ret": 0.00097,
+        "med_ret": 0.00062,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 714,
+        "signals": 69,
+        "coverage": 0.0966,
+        "hit": 0.4783,
+        "lo": 0.29,
+        "hi": 0.6729,
+        "avg_ret": 0.00109,
+        "med_ret": 0.0,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 306,
+        "signals": 26,
+        "coverage": 0.085,
+        "hit": 0.6538,
+        "lo": 0.3349,
+        "hi": 0.8763,
+        "avg_ret": 0.00336,
+        "med_ret": 0.00153,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "breakout_baseline",
+       "rule_ar": "الاختراق",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 119,
+        "signals": 11,
+        "coverage": 0.0924,
+        "hit": 0.6364,
+        "lo": 0.2118,
+        "hi": 0.9193,
+        "avg_ret": 0.01931,
+        "med_ret": 0.0066,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 7,
+        "coverage": 0.1373,
+        "hit": 0.4286,
+        "lo": 0.0784,
+        "hi": 0.8686,
+        "avg_ret": 0.00201,
+        "med_ret": -0.00257,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 1,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 2859,
+        "signals": 1428,
+        "coverage": 0.4995,
+        "hit": 0.395,
+        "lo": 0.3514,
+        "hi": 0.4402,
+        "avg_ret": -0.00016,
+        "med_ret": 0.0,
+        "edge": "negative_statistical_screen_only",
+        "edge_ar": "negative_statistical_screen_only"
+       },
+       "holdout": {
+        "eligible": 1226,
+        "signals": 625,
+        "coverage": 0.5098,
+        "hit": 0.5088,
+        "lo": 0.4404,
+        "hi": 0.5769,
+        "avg_ret": 0.00013,
+        "med_ret": 8e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 2,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 1429,
+        "signals": 714,
+        "coverage": 0.4997,
+        "hit": 0.4384,
+        "lo": 0.3759,
+        "hi": 0.5029,
+        "avg_ret": -0.00031,
+        "med_ret": -8e-05,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 613,
+        "signals": 312,
+        "coverage": 0.509,
+        "hit": 0.5096,
+        "lo": 0.4135,
+        "hi": 0.605,
+        "avg_ret": 0.00037,
+        "med_ret": 0.00025,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 4,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 714,
+        "signals": 349,
+        "coverage": 0.4888,
+        "hit": 0.4527,
+        "lo": 0.364,
+        "hi": 0.5446,
+        "avg_ret": -0.00067,
+        "med_ret": -0.00086,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       "holdout": {
+        "eligible": 306,
+        "signals": 154,
+        "coverage": 0.5033,
+        "hit": 0.4935,
+        "lo": 0.3602,
+        "hi": 0.6278,
+        "avg_ret": 0.00082,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       }
+      },
+      {
+       "rule": "regime_conditioned_baseline",
+       "rule_ar": "مشروط بالنظام السوقي",
+       "kind": "split",
+       "horizon": 24,
+       "decision": "reject_for_probability_calibration",
+       "dev": {
+        "eligible": 119,
+        "signals": 55,
+        "coverage": 0.4622,
+        "hit": 0.4727,
+        "lo": 0.2671,
+        "hi": 0.688,
+        "avg_ret": -0.00023,
+        "med_ret": -0.00282,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       "holdout": {
+        "eligible": 51,
+        "signals": 25,
+        "coverage": 0.4902,
+        "hit": 0.6,
+        "lo": 0.2879,
+        "hi": 0.8477,
+        "avg_ret": 0.00323,
+        "med_ret": 0.00247,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      }
+     ],
+     "walk_forward": {
+      "status": "walk_forward_validation_complete",
+      "stable_edge_horizons": [],
+      "blockers": [
+       "transaction_costs_not_included",
+       "execution_not_simulated",
+       "prospective_shadow_sample_not_accumulated",
+       "history_inspected_in_prior_development",
+       "source_calendar_and_series_construction_unverified"
+      ],
+      "folds": [
+       {
+        "horizon": 1,
+        "fold": 1,
+        "test_start": "2026-05-20",
+        "test_end": "2026-06-26",
+        "eligible": 612,
+        "signals": 297,
+        "coverage": 0.4853,
+        "hit": 0.4343,
+        "lo": 0.3396,
+        "hi": 0.5341,
+        "avg_ret": 0.00016,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 2,
+        "test_start": "2026-06-26",
+        "test_end": "2026-08-04",
+        "eligible": 612,
+        "signals": 294,
+        "coverage": 0.4804,
+        "hit": 0.4422,
+        "lo": 0.3465,
+        "hi": 0.5423,
+        "avg_ret": -0.00061,
+        "med_ret": -0.00062,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 3,
+        "test_start": "2026-08-04",
+        "test_end": "2026-09-10",
+        "eligible": 612,
+        "signals": 323,
+        "coverage": 0.5278,
+        "hit": 0.5232,
+        "lo": 0.4283,
+        "hi": 0.6165,
+        "avg_ret": 0.00029,
+        "med_ret": 0.00023,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 1,
+        "fold": 4,
+        "test_start": "2026-09-10",
+        "test_end": "2026-10-16",
+        "eligible": 613,
+        "signals": 302,
+        "coverage": 0.4927,
+        "hit": 0.4934,
+        "lo": 0.3964,
+        "hi": 0.5909,
+        "avg_ret": -3e-05,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 1,
+        "test_start": "2026-05-20",
+        "test_end": "2026-06-26",
+        "eligible": 306,
+        "signals": 148,
+        "coverage": 0.4837,
+        "hit": 0.4865,
+        "lo": 0.3513,
+        "hi": 0.6237,
+        "avg_ret": 0.00092,
+        "med_ret": 0.0,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 2,
+        "test_start": "2026-06-26",
+        "test_end": "2026-08-04",
+        "eligible": 306,
+        "signals": 153,
+        "coverage": 0.5,
+        "hit": 0.3987,
+        "lo": 0.2744,
+        "hi": 0.5376,
+        "avg_ret": -0.00108,
+        "med_ret": -0.00144,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 3,
+        "test_start": "2026-08-04",
+        "test_end": "2026-09-10",
+        "eligible": 306,
+        "signals": 162,
+        "coverage": 0.5294,
+        "hit": 0.5247,
+        "lo": 0.3925,
+        "hi": 0.6535,
+        "avg_ret": 0.0007,
+        "med_ret": 0.00053,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 2,
+        "fold": 4,
+        "test_start": "2026-09-10",
+        "test_end": "2026-10-16",
+        "eligible": 306,
+        "signals": 152,
+        "coverage": 0.4967,
+        "hit": 0.5066,
+        "lo": 0.3715,
+        "hi": 0.6407,
+        "avg_ret": 0.00023,
+        "med_ret": 0.00012,
+        "edge": "edge_not_established",
+        "edge_ar": "لا أفضلية مثبتة"
+       },
+       {
+        "horizon": 4,
+        "fold": 1,
+        "test_start": "2026-05-20",
+        "test_end": "2026-06-26",
+        "eligible": 153,
+        "signals": 74,
+        "coverage": 0.4837,
+        "hit": 0.5135,
+        "lo": 0.3258,
+        "hi": 0.6975,
+        "avg_ret": 0.00233,
+        "med_ret": 0.00057,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 2,
+        "test_start": "2026-06-26",
+        "test_end": "2026-08-04",
+        "eligible": 153,
+        "signals": 81,
+        "coverage": 0.5294,
+        "hit": 0.4074,
+        "lo": 0.2431,
+        "hi": 0.5954,
+        "avg_ret": -0.00102,
+        "med_ret": -0.0021,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 3,
+        "test_start": "2026-08-04",
+        "test_end": "2026-09-10",
+        "eligible": 153,
+        "signals": 80,
+        "coverage": 0.5229,
+        "hit": 0.5,
+        "lo": 0.3202,
+        "hi": 0.6798,
+        "avg_ret": 0.00116,
+        "med_ret": 0.00019,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 4,
+        "fold": 4,
+        "test_start": "2026-09-10",
+        "test_end": "2026-10-16",
+        "eligible": 153,
+        "signals": 73,
+        "coverage": 0.4771,
+        "hit": 0.589,
+        "lo": 0.3921,
+        "hi": 0.7611,
+        "avg_ret": 0.00076,
+        "med_ret": 0.00099,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 1,
+        "test_start": "2026-05-20",
+        "test_end": "2026-06-25",
+        "eligible": 25,
+        "signals": 13,
+        "coverage": 0.52,
+        "hit": 0.6154,
+        "lo": 0.2197,
+        "hi": 0.9009,
+        "avg_ret": 0.01815,
+        "med_ret": 0.00804,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 2,
+        "test_start": "2026-06-26",
+        "test_end": "2026-08-03",
+        "eligible": 25,
+        "signals": 18,
+        "coverage": 0.72,
+        "hit": 0.3889,
+        "lo": 0.1225,
+        "hi": 0.7436,
+        "avg_ret": -0.00743,
+        "med_ret": -0.00806,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 3,
+        "test_start": "2026-08-04",
+        "test_end": "2026-09-09",
+        "eligible": 25,
+        "signals": 13,
+        "coverage": 0.52,
+        "hit": 0.6154,
+        "lo": 0.2197,
+        "hi": 0.9009,
+        "avg_ret": 0.00225,
+        "med_ret": 0.00475,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       },
+       {
+        "horizon": 24,
+        "fold": 4,
+        "test_start": "2026-09-10",
+        "test_end": "2026-10-15",
+        "eligible": 25,
+        "signals": 11,
+        "coverage": 0.44,
+        "hit": 0.4545,
+        "lo": 0.1186,
+        "hi": 0.8377,
+        "avg_ret": 0.00457,
+        "med_ret": -0.00122,
+        "edge": "insufficient_active_signals",
+        "edge_ar": "إشارات غير كافية"
+       }
+      ]
+     }
+    }
+   },
+   "zones": {
+    "thirty_minute": [
+     {
+      "low": 56.96,
+      "high": 57.168,
+      "centre": 57.068,
+      "evidence": [
+       "classic_s3",
+       "support_20",
+       "classic_s2",
+       "fib_s3",
+       "fib_s2",
+       "classic_s1",
+       "fib_s1"
+      ],
+      "n": 7
+     },
+     {
+      "low": 57.09,
+      "high": 57.285,
+      "centre": 57.194,
+      "evidence": [
+       "pivot_previous_bar",
+       "fib_r1",
+       "classic_r1",
+       "fib_r2",
+       "classic_r2",
+       "fib_r3"
+      ],
+      "n": 6
+     },
+     {
+      "low": 57.215,
+      "high": 57.325,
+      "centre": 57.27,
+      "evidence": [
+       "classic_r3"
+      ],
+      "n": 1
+     },
+     {
+      "low": 57.419,
+      "high": 57.585,
+      "centre": 57.502,
+      "evidence": [
+       "ema_26",
+       "sma_20"
+      ],
+      "n": 2
+     },
+     {
+      "low": 57.58,
+      "high": 57.69,
+      "centre": 57.635,
+      "evidence": [
+       "sma_50"
+      ],
+      "n": 1
+     },
+     {
+      "low": 58.085,
+      "high": 58.195,
+      "centre": 58.14,
+      "evidence": [
+       "resistance_20"
+      ],
+      "n": 1
+     },
+     {
+      "low": 58.285,
+      "high": 58.396,
+      "centre": 58.341,
+      "evidence": [
+       "sma_200"
+      ],
+      "n": 1
+     }
+    ],
+    "hourly": [
+     {
+      "low": 56.703,
+      "high": 56.987,
+      "centre": 56.866,
+      "evidence": [
+       "classic_s3",
+       "classic_s2",
+       "fib_s3"
+      ],
+      "n": 3
+     },
+     {
+      "low": 56.933,
+      "high": 57.154,
+      "centre": 57.046,
+      "evidence": [
+       "fib_s2",
+       "support_20",
+       "classic_s1",
+       "sma_50",
+       "fib_s1"
+      ],
+      "n": 5
+     },
+     {
+      "low": 57.099,
+      "high": 57.401,
+      "centre": 57.26,
+      "evidence": [
+       "pivot_previous_bar",
+       "fib_r1",
+       "classic_r1"
+      ],
+      "n": 3
+     },
+     {
+      "low": 57.266,
+      "high": 57.561,
+      "centre": 57.431,
+      "evidence": [
+       "fib_r2",
+       "classic_r2",
+       "fib_r3",
+       "ema_26"
+      ],
+      "n": 4
+     },
+     {
+      "low": 57.513,
+      "high": 57.764,
+      "centre": 57.639,
+      "evidence": [
+       "classic_r3",
+       "sma_20"
+      ],
+      "n": 2
+     },
+     {
+      "low": 58.061,
+      "high": 58.219,
+      "centre": 58.14,
+      "evidence": [
+       "resistance_20"
+      ],
+      "n": 1
+     },
+     {
+      "low": 59.38,
+      "high": 59.538,
+      "centre": 59.459,
+      "evidence": [
+       "sma_200"
+      ],
+      "n": 1
+     }
+    ]
+   },
+   "scenarios": {
+    "thirty_minute": [
+     {
+      "scenario": "downtrend_continuation_condition",
+      "regime": "trend_down_strong",
+      "trigger": {
+       "condition": "close_below_support",
+       "level": 57.035
+      },
+      "invalidation": {
+       "condition": "close_above_slow_ema",
+       "level": 57.47433898179249
+      },
+      "zone": {
+       "support": 57.035,
+       "resistance": 58.14
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     }
+    ],
+    "hourly": [
+     {
+      "scenario": "transition_upward_breakout_condition",
+      "regime": "unclear_transition",
+      "trigger": {
+       "condition": "close_above_resistance",
+       "level": 58.14
+      },
+      "invalidation": {
+       "condition": "close_back_inside_range",
+       "level": 58.14
+      },
+      "zone": {
+       "support": 57.035,
+       "resistance": 58.14
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     },
+     {
+      "scenario": "transition_downward_breakout_condition",
+      "regime": "unclear_transition",
+      "trigger": {
+       "condition": "close_below_support",
+       "level": 57.035
+      },
+      "invalidation": {
+       "condition": "close_back_inside_range",
+       "level": 57.035
+      },
+      "zone": {
+       "support": 57.035,
+       "resistance": 58.14
+      },
+      "probability": null,
+      "status": "withheld_unvalidated"
+     }
+    ]
+   },
+   "time_profiles": {
+    "thirty_minute": {
+     "by_hour": [
+      {
+       "h": 0,
+       "n": 208,
+       "mean": 0.000128,
+       "med": 0.0
+      },
+      {
+       "h": 1,
+       "n": 212,
+       "mean": -0.000272,
+       "med": 0.0
+      },
+      {
+       "h": 2,
+       "n": 212,
+       "mean": -9.3e-05,
+       "med": 0.0
+      },
+      {
+       "h": 3,
+       "n": 212,
+       "mean": 6.6e-05,
+       "med": 0.0
+      },
+      {
+       "h": 4,
+       "n": 212,
+       "mean": -0.000152,
+       "med": 0.0
+      },
+      {
+       "h": 5,
+       "n": 212,
+       "mean": 2.1e-05,
+       "med": 0.0
+      },
+      {
+       "h": 6,
+       "n": 212,
+       "mean": 0.000468,
+       "med": 0.0
+      },
+      {
+       "h": 7,
+       "n": 212,
+       "mean": 9.5e-05,
+       "med": 0.0
+      },
+      {
+       "h": 8,
+       "n": 210,
+       "mean": -0.000353,
+       "med": 0.0
+      },
+      {
+       "h": 9,
+       "n": 210,
+       "mean": -2.9e-05,
+       "med": 0.0
+      },
+      {
+       "h": 10,
+       "n": 210,
+       "mean": 1.3e-05,
+       "med": 0.0
+      },
+      {
+       "h": 11,
+       "n": 210,
+       "mean": 0.000688,
+       "med": 0.0
+      },
+      {
+       "h": 12,
+       "n": 210,
+       "mean": -0.000272,
+       "med": 0.0
+      },
+      {
+       "h": 13,
+       "n": 210,
+       "mean": 7e-06,
+       "med": -0.000112
+      },
+      {
+       "h": 14,
+       "n": 210,
+       "mean": -0.000423,
+       "med": -0.000533
+      },
+      {
+       "h": 15,
+       "n": 211,
+       "mean": -0.00011,
+       "med": 0.0
+      },
+      {
+       "h": 16,
+       "n": 212,
+       "mean": -0.000137,
+       "med": 0.0
+      },
+      {
+       "h": 17,
+       "n": 208,
+       "mean": -0.000129,
+       "med": -0.000159
+      },
+      {
+       "h": 18,
+       "n": 208,
+       "mean": -7.4e-05,
+       "med": 0.0
+      },
+      {
+       "h": 19,
+       "n": 206,
+       "mean": -0.000211,
+       "med": 0.0
+      },
+      {
+       "h": 20,
+       "n": 206,
+       "mean": -0.000134,
+       "med": 0.0
+      },
+      {
+       "h": 22,
+       "n": 194,
+       "mean": 9.5e-05,
+       "med": 0.0
+      },
+      {
+       "h": 23,
+       "n": 208,
+       "mean": 8e-05,
+       "med": 0.0
+      }
+     ],
+     "by_weekday": [
+      {
+       "weekday_utc": 0,
+       "sample": 936,
+       "mean_return": -7.332367576677434e-05,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 1,
+       "sample": 959,
+       "mean_return": -0.00014263879414710422,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 2,
+       "sample": 959,
+       "mean_return": -0.00014264454250607659,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 3,
+       "sample": 969,
+       "mean_return": 0.00012733683855994569,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 4,
+       "sample": 908,
+       "mean_return": 4.790966925099436e-05,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 6,
+       "sample": 84,
+       "mean_return": 0.0002659904072678811,
+       "median_return": 0.0
+      }
+     ]
+    },
+    "hourly": {
+     "by_hour": [
+      {
+       "h": 0,
+       "n": 158,
+       "mean": 0.000357,
+       "med": 0.0
+      },
+      {
+       "h": 1,
+       "n": 179,
+       "mean": -0.000627,
+       "med": 0.0
+      },
+      {
+       "h": 2,
+       "n": 182,
+       "mean": -0.000814,
+       "med": 0.0
+      },
+      {
+       "h": 3,
+       "n": 182,
+       "mean": 0.00067,
+       "med": 0.0
+      },
+      {
+       "h": 4,
+       "n": 182,
+       "mean": -0.000108,
+       "med": 0.0
+      },
+      {
+       "h": 5,
+       "n": 182,
+       "mean": -0.000754,
+       "med": 0.0
+      },
+      {
+       "h": 6,
+       "n": 182,
+       "mean": 0.000137,
+       "med": 0.0
+      },
+      {
+       "h": 7,
+       "n": 182,
+       "mean": 0.000154,
+       "med": 0.0
+      },
+      {
+       "h": 8,
+       "n": 182,
+       "mean": -0.000193,
+       "med": 0.0
+      },
+      {
+       "h": 9,
+       "n": 182,
+       "mean": -0.000131,
+       "med": 0.0
+      },
+      {
+       "h": 10,
+       "n": 182,
+       "mean": -0.00036,
+       "med": 0.0
+      },
+      {
+       "h": 11,
+       "n": 182,
+       "mean": 0.000622,
+       "med": 0.0
+      },
+      {
+       "h": 12,
+       "n": 182,
+       "mean": -0.000375,
+       "med": 0.0
+      },
+      {
+       "h": 13,
+       "n": 182,
+       "mean": 0.000598,
+       "med": 0.0
+      },
+      {
+       "h": 14,
+       "n": 183,
+       "mean": -0.000946,
+       "med": -0.000152
+      },
+      {
+       "h": 15,
+       "n": 183,
+       "mean": -0.000922,
+       "med": 0.0
+      },
+      {
+       "h": 16,
+       "n": 183,
+       "mean": -0.00053,
+       "med": 0.0
+      },
+      {
+       "h": 17,
+       "n": 181,
+       "mean": -0.000317,
+       "med": 0.0
+      },
+      {
+       "h": 18,
+       "n": 181,
+       "mean": -4e-06,
+       "med": 0.0
+      },
+      {
+       "h": 19,
+       "n": 179,
+       "mean": -0.000321,
+       "med": 0.0
+      },
+      {
+       "h": 20,
+       "n": 178,
+       "mean": -0.000126,
+       "med": 0.0
+      },
+      {
+       "h": 21,
+       "n": 23,
+       "mean": -0.000147,
+       "med": 0.0
+      },
+      {
+       "h": 22,
+       "n": 125,
+       "mean": 0.000743,
+       "med": 0.0
+      },
+      {
+       "h": 23,
+       "n": 150,
+       "mean": 0.000153,
+       "med": 0.0
+      }
+     ],
+     "by_weekday": [
+      {
+       "weekday_utc": 0,
+       "sample": 803,
+       "mean_return": -4.002624824433623e-06,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 1,
+       "sample": 820,
+       "mean_return": -0.0004252048235551945,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 2,
+       "sample": 829,
+       "mean_return": -0.0002066551140851829,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 3,
+       "sample": 831,
+       "mean_return": -0.0004417711470012093,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 4,
+       "sample": 745,
+       "mean_return": 0.0002721973773405797,
+       "median_return": 0.0
+      },
+      {
+       "weekday_utc": 6,
+       "sample": 59,
+       "mean_return": 0.0011241576758562856,
+       "median_return": 0.0
+      }
+     ]
+    }
+   },
+   "action": {
+    "action": "NO_LIVE_SIGNAL",
+    "probability": null,
+    "reason": "source_quality_and_calibration_not_approved"
+   }
+  }
+ },
+ "journal": {
+  "valid": true,
+  "record_count": 2,
+  "last_hash": "f6491f72950d34a73fb57d65f7a47fafbacfe7bd354930ab564328f46c882050"
+ },
+ "outcome_scoring": {
+  "appended": 0,
+  "pending": 20,
+  "legacy_unscorable": 0,
+  "blocked": 0
+ },
+ "layers": {
+  "event": "blocked_verified_event_dataset_missing",
+  "execution": "blocked_verified_cost_model_missing",
+  "cross_asset": {
+   "state": "not_available",
+   "reason": "daily_pair_missing"
+  },
+  "shadow": {
+   "status": "research_journaling_only_not_validated_prospective_signal",
+   "orders_enabled": false,
+   "probability_publication_enabled": false,
+   "next_requirement": "accumulate_forward_unmodified_journal_observations"
+  }
+ }
+}
