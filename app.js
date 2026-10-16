@@ -310,7 +310,7 @@
   /* ------------------------------------------------------------ archive */
   function renderArchive() {
     const v = $('#view-archive');
-    v.innerHTML = `<section class="sec">${secH('news', 'أرشيف التقارير', (S.index.reports || []).length + ' تقرير', 'f-brown')}<div class="sec-b">${(S.index.reports || []).map((r) => `<div class="arch" data-id="${esc(r.id)}"><span class="d">${esc(r.date)}</span><span class="pill">${esc(r.type_ar)}</span><div><b>${esc(r.title)}</b><div class="small muted">${esc(r.headline || '')}</div></div></div>`).join('') || '<div class="empty">لا توجد تقارير بعد</div>'}</div></section>`;
+    v.innerHTML = `<section class="sec">${secH('news', 'أرشيف التقارير', (S.index.reports || []).length + ' تقرير', 'f-brown')}<div class="sec-b">${(S.index.reports || []).map((r) => `<div class="arch" data-id="${esc(r.id)}"><span class="d">${esc(r.date)}</span><span class="pill"${String(r.type).startsWith('test') ? ' style="background:#eee;color:#888"' : ''}>${esc(r.type_ar)}</span><div><b>${esc(r.title)}</b><div class="small muted">${esc(r.headline || '')}</div></div></div>`).join('') || '<div class="empty">لا توجد تقارير بعد</div>'}</div></section>`;
     $$('#view-archive .arch').forEach((el) => el.addEventListener('click', () => go('report', el.dataset.id)));
   }
 
