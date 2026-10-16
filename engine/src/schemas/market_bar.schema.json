@@ -1,0 +1,41 @@
+{
+  "title": "SoloSophy Market Bar",
+  "type": "object",
+  "required": [
+    "symbol",
+    "exchange",
+    "timeframe",
+    "bar_start_utc",
+    "bar_end_utc",
+    "open",
+    "high",
+    "low",
+    "close",
+    "is_closed",
+    "source",
+    "received_at_utc",
+    "data_delay_state"
+  ],
+  "properties": {
+    "symbol": {"type": "string"},
+    "local_symbol": {"type": ["string", "null"]},
+    "exchange": {"type": "string"},
+    "currency": {"type": ["string", "null"]},
+    "contract_expiry": {"type": ["string", "null"]},
+    "timeframe": {"enum": ["daily", "hourly", "thirty_minute"]},
+    "bar_start_utc": {"type": "string"},
+    "bar_end_utc": {"type": "string"},
+    "open": {"type": "number"},
+    "high": {"type": "number"},
+    "low": {"type": "number"},
+    "close": {"type": "number"},
+    "volume": {"type": ["number", "null"]},
+    "volume_quality": {"enum": ["verified", "usable_recent", "unverified", "missing"]},
+    "is_closed": {"type": "boolean"},
+    "source": {"type": "string"},
+    "received_at_utc": {"type": "string"},
+    "data_delay_state": {"enum": ["realtime", "delayed", "historical", "unknown"]},
+    "request_id": {"type": ["string", "null"]}
+  }
+}
+

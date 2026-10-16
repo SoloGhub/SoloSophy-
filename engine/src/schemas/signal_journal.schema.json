@@ -1,0 +1,37 @@
+{
+  "title": "SoloSophy Signal Journal",
+  "type": "object",
+  "required": [
+    "signal_id",
+    "created_at_utc",
+    "data_cutoff_utc",
+    "symbol",
+    "contract_expiry",
+    "quality_decision",
+    "regime",
+    "scenario_set",
+    "ruleset_version",
+    "input_fingerprint",
+    "previous_hash",
+    "record_hash"
+  ],
+  "properties": {
+    "signal_id": {"type": "string"},
+    "created_at_utc": {"type": "string"},
+    "data_cutoff_utc": {"type": "string"},
+    "symbol": {"type": "string"},
+    "contract_expiry": {"type": "string"},
+    "quality_decision": {"enum": ["accept", "accept_with_limits", "no_analysis"]},
+    "regime": {"type": "string"},
+    "timeframe_states": {"type": "object"},
+    "scenario_set": {"type": "array", "items": {"type": "object"}},
+    "ruleset_version": {"type": "string"},
+    "input_fingerprint": {"type": "string"},
+    "previous_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "record_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "probabilities_withheld": {"type": "boolean"},
+    "orders_enabled": {"type": "boolean"},
+    "outcomes": {"type": "array", "items": {"type": "object"}},
+    "explanation": {"type": ["string", "null"]}
+  }
+}

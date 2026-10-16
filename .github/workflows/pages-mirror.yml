@@ -1,0 +1,41 @@
+name: SoloSophy — validate and mirror web app to gh-pages
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pages-mirror
+  cancel-in-progress: true
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate JSON data files
+        run: |
+          python3 - <<'PY'
+          import json, glob, sys
+          bad = []
+          for f in glob.glob('docs/data/**/*.json', recursive=True):
+              try: json.load(open(f))
+              except Exception as e: bad.append(f'{f}: {e}')
+          idx = json.load(open('docs/data/index.json'))
+          import os
+          if not os.path.exists('docs/' + idx['latest']): bad.append('latest report path missing: ' + idx['latest'])
+          print('\n'.join(bad) or 'all data files valid')
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Mirror docs/ to gh-pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          touch docs/.nojekyll
+          git add -f docs/.nojekyll || true
+          git commit -m 'nojekyll' >/dev/null 2>&1 || true
+          SPLIT=$(git subtree split --prefix docs HEAD)
+          git push origin "$SPLIT":refs/heads/gh-pages --force

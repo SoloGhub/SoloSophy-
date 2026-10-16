@@ -1,0 +1,36 @@
+{
+  "title": "SoloSophy Data Quality Report",
+  "type": "object",
+  "required": [
+    "dataset_id",
+    "symbol",
+    "timeframe",
+    "coverage_start_utc",
+    "coverage_end_utc",
+    "bar_count",
+    "duplicate_count",
+    "gap_count",
+    "incomplete_bar_count",
+    "decision",
+    "checked_at_utc"
+  ],
+  "properties": {
+    "dataset_id": {"type": "string"},
+    "symbol": {"type": "string"},
+    "local_symbol": {"type": ["string", "null"]},
+    "timeframe": {"enum": ["daily", "hourly", "thirty_minute"]},
+    "coverage_start_utc": {"type": "string"},
+    "coverage_end_utc": {"type": "string"},
+    "bar_count": {"type": "integer"},
+    "duplicate_count": {"type": "integer"},
+    "gap_count": {"type": "integer"},
+    "incomplete_bar_count": {"type": "integer"},
+    "valid_volume_share": {"type": ["number", "null"]},
+    "delay_state": {"enum": ["realtime", "delayed", "historical", "mixed", "unknown"]},
+    "blocking_reasons": {"type": "array", "items": {"type": "string"}},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "decision": {"enum": ["accept", "accept_with_limits", "quarantine", "reject"]},
+    "checked_at_utc": {"type": "string"}
+  }
+}
+

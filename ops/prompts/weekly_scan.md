@@ -1,0 +1,8 @@
+# Sunday weekly event scan (~19:50 Dubai)
+Goal: prepare the week: calendar, alert schedule, contract roll check.
+1. Read `ops/RUNBOOK.md` §0 and `ops/contracts.json`.
+2. Roll check: `search_futures` for GC, SI, HG, CL (underlyings in contracts.json). If the roll rule triggers (next contract OI higher, or ≤5 trading days to last trade), update `ops/contracts.json` (contract, contract_id, month) and note it in the summary.
+3. Calendar for Mon–Fri (Dubai time; US on EDT until 1 Nov, EST after → US data 17:30 Dubai from 2 Nov; UK on GMT from 26 Oct): every Critical/High event for gold, silver, copper, crude, semiconductors, with consensus and prior from two sources. Include FOMC/ECB/BoJ, CPI/PPI/jobs/PCE/GDP, China data, EIA, OPEC+, big semis earnings (with Dubai time of release), contract expiries.
+4. Write `docs/data/alerts.json`: `events` (event, when, t30, t1, assets, status "مجدول") and keep `tasks` as is.
+5. Create the alert tasks with the scheduling tool (`create_trigger`, one-off `run_once_at` in UTC = Dubai − 4h) for at most 10 events of the week ranked by importance: a T-30 task and a T+1 task (T+1 = release time + 6 minutes; for after-close earnings use +20 minutes). Each prompt: "SoloSophy event alert <T-30|T+1>: <event> at <Dubai time> (<UTC>). Assets: <list>. Consensus <x>, prior <y>, sources <urls>. Read ops/RUNBOOK.md and ops/prompts/event_alert.md in the SoloGhub/solosophy- working copy and execute the <T-30|T+1> procedure. Push to main." Name them "SoloSophy تنبيه — <event> — T-30|T+1".
+6. Commit and push alerts.json/contracts.json (RUNBOOK §6). Final Arabic summary listing the scheduled alerts with Dubai times.

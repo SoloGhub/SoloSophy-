@@ -1,0 +1,14 @@
+{
+ "updated": "2026-10-17",
+ "roll_rule": "Switch to the next contract when its open interest is higher OR 5 trading days before the current contract's last trading day. Check every Sunday scan with search_futures.",
+ "price_rule": "Always IBKR 'last' (Last price). Never settlement. top_status FROZEN outside sessions = reference close.",
+ "assets": {
+  "GC":   {"name_ar": "الذهب", "contract": "GCZ6", "contract_id": 462941472, "exchange": "COMEX", "security_type": "FUT", "month": "202612", "tick": 0.10, "underlying_search": "GC"},
+  "SI":   {"name_ar": "الفضة", "contract": "SIZ6", "contract_id": 535526329, "exchange": "COMEX", "security_type": "FUT", "month": "202612", "tick": 0.005, "underlying_search": "SI"},
+  "HG":   {"name_ar": "النحاس", "contract": "HGZ6", "contract_id": 517660690, "exchange": "COMEX", "security_type": "FUT", "month": "202612", "tick": 0.0005, "underlying_conid": 36557087},
+  "CL":   {"name_ar": "النفط الخام WTI", "contract": "CLZ6", "contract_id": 296574787, "exchange": "NYMEX", "security_type": "FUT", "month": "202612", "tick": 0.01, "underlying_conid": 17340715,
+           "front_note": "CLX6 (304037511) last trade Tue 20 Oct 2026 — CLZ6 is the active contract; CLZ6 last trade ≈ Fri 20 Nov 2026 (verify with search_futures) → roll to CLF7 by ~13 Nov or earlier if CLF7 open interest is higher."},
+  "SOXL": {"name_ar": "SOXL (أشباه الموصلات ×3)", "contract": "SOXL", "contract_id": 73340487, "exchange": "SMART", "security_type": "STK", "tick": 0.01}
+ },
+ "watch_thresholds_pct": {"GC": 0.8, "SI": 1.5, "HG": 1.2, "CL": 1.5, "SOXL": 3.0}
+}

@@ -1,0 +1,58 @@
+{
+ "schema": "solosophy.live.v1",
+ "checked_utc": "2026-10-16T23:15:00Z",
+ "checked_label": "السبت 17 أكتوبر 03:15 دبي (الأسواق مغلقة — مرجع إغلاق الجمعة)",
+ "assets": [
+  {
+   "code": "GC",
+   "last": 4186.7,
+   "ref_close": 4186.7,
+   "chg_pct": 0.0,
+   "threshold": 0.8,
+   "breach": false,
+   "status_ar": "مرجع الإغلاق",
+   "ts_label": "إغلاق الجمعة 16 أكتوبر"
+  },
+  {
+   "code": "SI",
+   "last": 57.135,
+   "ref_close": 57.135,
+   "chg_pct": 0.0,
+   "threshold": 1.5,
+   "breach": false,
+   "status_ar": "مرجع الإغلاق",
+   "ts_label": "إغلاق الجمعة 16 أكتوبر"
+  },
+  {
+   "code": "HG",
+   "last": 6.562,
+   "ref_close": 6.562,
+   "chg_pct": 0.0,
+   "threshold": 1.2,
+   "breach": false,
+   "status_ar": "مرجع الإغلاق",
+   "ts_label": "إغلاق الجمعة 16 أكتوبر"
+  },
+  {
+   "code": "CL",
+   "last": 99.04,
+   "ref_close": 99.04,
+   "chg_pct": 0.0,
+   "threshold": 1.5,
+   "breach": false,
+   "status_ar": "مرجع الإغلاق",
+   "ts_label": "إغلاق الجمعة 16 أكتوبر"
+  },
+  {
+   "code": "SOXL",
+   "last": 93.67,
+   "ref_close": 93.67,
+   "chg_pct": 0.0,
+   "threshold": 3.0,
+   "breach": false,
+   "status_ar": "مرجع الإغلاق",
+   "ts_label": "إغلاق الجمعة 16 أكتوبر"
+  }
+ ],
+ "note": "المراقبة كل ساعة تبدأ الاثنين 19 أكتوبر 10:07 دبي. العتبات: ذهب ±0.8% · فضة ±1.5% · نحاس ±1.2% · نفط ±1.5% · SOXL ±3% من إغلاق الجلسة السابقة."
+}

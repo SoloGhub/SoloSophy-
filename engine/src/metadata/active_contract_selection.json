@@ -1,0 +1,70 @@
+{
+  "observed_at_utc": "2026-08-27T19:44:19.263Z",
+  "source": "existing_ibkr_connection",
+  "selection_rule": "highest_open_interest_among_tested_nearby_standard_contracts",
+  "scope_note": "This selects the analysis contract only from the explicitly tested nearby contracts; it is not a claim about every listed expiry.",
+  "assets": [
+    {
+      "symbol": "GC",
+      "exchange": "COMEX",
+      "tested": [
+        {
+          "contract_id": 760200565,
+          "local_symbol": "GCU6",
+          "contract_month": "202609",
+          "future_open_interest": 2817
+        },
+        {
+          "contract_id": 744880148,
+          "local_symbol": "GCV6",
+          "contract_month": "202610",
+          "future_open_interest": 50634
+        },
+        {
+          "contract_id": 462941472,
+          "local_symbol": "GCZ6",
+          "contract_month": "202612",
+          "future_open_interest": 330116
+        }
+      ],
+      "selected": {
+        "contract_id": 462941472,
+        "local_symbol": "GCZ6",
+        "contract_month": "202612",
+        "future_open_interest": 330116
+      },
+      "decision": "selected_for_v1_analysis"
+    },
+    {
+      "symbol": "SI",
+      "exchange": "COMEX",
+      "tested": [
+        {
+          "contract_id": 738529133,
+          "local_symbol": "SIU6",
+          "contract_month": "202609",
+          "future_open_interest": 15121
+        },
+        {
+          "contract_id": 760200581,
+          "local_symbol": "SIV6",
+          "contract_month": "202610",
+          "future_open_interest": 2512
+        },
+        {
+          "contract_id": 535526329,
+          "local_symbol": "SIZ6",
+          "contract_month": "202612",
+          "future_open_interest": 79960
+        }
+      ],
+      "selected": {
+        "contract_id": 535526329,
+        "local_symbol": "SIZ6",
+        "contract_month": "202612",
+        "future_open_interest": 79960
+      },
+      "decision": "selected_for_v1_analysis"
+    }
+  ]
+}

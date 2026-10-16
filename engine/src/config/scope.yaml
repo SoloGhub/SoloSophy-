@@ -1,0 +1,34 @@
+project: SoloSophy Market Engine
+release_stage: audited_research_live_release_incomplete
+assets:
+  - symbol: GC
+    exchange: COMEX
+    role: gold_futures
+  - symbol: SI
+    exchange: COMEX
+    role: silver_futures
+timeframes:
+  - daily
+  - hourly
+  - thirty_minute
+primary_source: existing_ibkr_connection
+coverage_targets:
+  daily: five_years_when_available
+  hourly: twelve_months_target_unconfirmed
+  thirty_minute: three_to_six_months_target_unconfirmed
+price_fields_requiring_quality_checks_not_automatically_trusted:
+  - open
+  - high
+  - low
+  - close
+conditional_fields:
+  - volume
+  - open_interest
+excluded_now:
+  - automated_order_execution
+  - machine_learning
+  - cme_datamine_purchase
+  - new_tws_api_setup
+  - depth_of_book_as_core_requirement
+  - unverified_historical_volume
+  - unverified_historical_open_interest

@@ -1,0 +1,33 @@
+{
+  "title": "SoloSophy Contract Snapshot",
+  "type": "object",
+  "required": [
+    "symbol",
+    "local_symbol",
+    "exchange",
+    "contract_expiry",
+    "market_state",
+    "observed_at_utc",
+    "source"
+  ],
+  "properties": {
+    "contract_id": {"type": ["string", "null"]},
+    "symbol": {"type": "string"},
+    "local_symbol": {"type": "string"},
+    "exchange": {"type": "string"},
+    "currency": {"type": ["string", "null"]},
+    "contract_expiry": {"type": "string"},
+    "last": {"type": ["number", "null"]},
+    "bid": {"type": ["number", "null"]},
+    "ask": {"type": ["number", "null"]},
+    "spread": {"type": ["number", "null"]},
+    "volume": {"type": ["number", "null"]},
+    "open_interest": {"type": ["number", "null"]},
+    "market_state": {"enum": ["open", "closed", "halted", "unknown"]},
+    "observed_at_utc": {"type": "string"},
+    "source": {"type": "string"},
+    "data_delay_state": {"enum": ["realtime", "delayed", "unknown"]},
+    "missing_field_reasons": {"type": "object"}
+  }
+}
+

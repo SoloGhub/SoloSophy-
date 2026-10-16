@@ -1,0 +1,6 @@
+[project]
+name = "solosophy-market-engine"
+version = "0.3.0"
+description = "Auditable multi-timeframe research engine for COMEX GC and SI"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "pandas>=2.0", "PyYAML>=6.0", "matplotlib>=3.8"]

@@ -1,0 +1,34 @@
+{
+  "observed_at_utc": "2026-08-27T18:26:48Z",
+  "source": "existing_ibkr_connection",
+  "selection_state": "candidates_only_not_active_selection",
+  "assets": [
+    {
+      "symbol": "GC",
+      "underlying_contract_id": 17340718,
+      "exchange": "COMEX",
+      "description": "Gold",
+      "candidates": [
+        {"contract_id": 732156872, "local_symbol": "GCQ6", "contract_month": "202608", "last_trading_date": "20260827", "expiry_proximity": "last_trading_day"},
+        {"contract_id": 760200565, "local_symbol": "GCU6", "contract_month": "202609", "last_trading_date": "20260928", "expiry_proximity": "near"},
+        {"contract_id": 744880148, "local_symbol": "GCV6", "contract_month": "202610", "last_trading_date": "20261028", "expiry_proximity": "next"},
+        {"contract_id": 462941472, "local_symbol": "GCZ6", "contract_month": "202612", "last_trading_date": "20261229", "expiry_proximity": "forward"}
+      ]
+    },
+    {
+      "symbol": "SI",
+      "underlying_contract_id": 36557082,
+      "exchange": "COMEX",
+      "description": "Silver Index",
+      "candidates": [
+        {"contract_id": 760200615, "local_symbol": "SIQ6", "contract_month": "202608", "last_trading_date": "20260827", "expiry_proximity": "last_trading_day"},
+        {"contract_id": 738529133, "local_symbol": "SIU6", "contract_month": "202609", "last_trading_date": "20260928", "expiry_proximity": "near"},
+        {"contract_id": 760200581, "local_symbol": "SIV6", "contract_month": "202610", "last_trading_date": "20261028", "expiry_proximity": "next"},
+        {"contract_id": 535526329, "local_symbol": "SIZ6", "contract_month": "202612", "last_trading_date": "20261229", "expiry_proximity": "forward"}
+      ]
+    }
+  ],
+  "price_snapshot_state": "empty_response",
+  "price_history_state": "temporarily_unavailable",
+  "quality_decision": "do_not_select_active_contract_without_market_evidence"
+}
